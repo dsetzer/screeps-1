@@ -546,6 +546,21 @@ findStorage = function () {
             harvest: false
         });
     }
+    //Links
+    let controllerLink = Game.getObjectById(this.room.memory.controllerLink);
+    if (controllerLink) {
+        let linkDistWeighted;
+        const object = controllerLink;
+        let numberOfUsers = _.filter(Game.creeps, (c) => c.memory.energyDestination === object.id).length;
+        if (object && object.energy < object.energyCapacity / 2 && numberOfUsers === 0) {
+            linkDistWeighted = _.round(object.pos.rangeToTarget(this) * 0.4, 0) + 1;
+        }
+        storage.push({
+            id: controllerLink.id,
+            distWeighted: linkDistWeighted,
+            harvest: false
+        });
+    }
     //Terminal
     let terminal = _.pluck(_.filter(this.room.memory.structureCache, 'type', 'terminal'), 'id');
     if (terminal.length > 0) {
@@ -639,6 +654,21 @@ findEssentials = function () {
             harvest: false
         });
     }
+    //Links
+    let controllerLink = Game.getObjectById(this.room.memory.controllerLink);
+    if (controllerLink) {
+        let linkDistWeighted;
+        const object = controllerLink;
+        let numberOfUsers = _.filter(Game.creeps, (c) => c.memory.energyDestination === object.id).length;
+        if (object && object.energy < object.energyCapacity / 2 && numberOfUsers === 0) {
+            linkDistWeighted = _.round(object.pos.rangeToTarget(this) * 0.4, 0) + 1;
+        }
+        storage.push({
+            id: controllerLink.id,
+            distWeighted: linkDistWeighted,
+            harvest: false
+        });
+    }
     //Tower
     let tower = _.pluck(_.filter(this.room.memory.structureCache, 'type', 'tower'), 'id');
     let harvester = _.filter(Game.creeps, (h) => h.memory.assignedSpawn === this.memory.assignedSpawn && (h.memory.role === 'stationaryHarvester' || h.memory.role === 'basicHarvester'));
@@ -648,7 +678,7 @@ findEssentials = function () {
             const object = Game.getObjectById(tower[i]);
             if (object) {
                 if (object.pos.getRangeTo(this) > 1) {
-                    if (object.room.memory.responseNeeded === true) {
+                    if (object.room.memory.responseNeeded === true && object.energy < object.energyCapacity * 0.85) {
                         const towerDistWeighted = _.round(object.pos.rangeToTarget(this) * 0.01, 0);
                         towers.push({
                             id: tower[i],
@@ -825,7 +855,7 @@ Creep.prototype.idleFor = function (ticks = 0) {
  creep.idleFor(6);
  *///Room intel
 Creep.prototype.cacheRoomIntel = function () {
-    if (this.room.memory.lastIntelCache < Game.time - 100) return;
+    if (this.room.memory.lastIntelCache > Game.time - 100) return;
     this.room.memory.lastIntelCache = Game.time;
     let room = Game.rooms[this.pos.roomName];
     let owner = undefined;

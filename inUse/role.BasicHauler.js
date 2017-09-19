@@ -11,12 +11,6 @@ const profiler = require('screeps-profiler');
 function role(creep) {
     if (creep.borderCheck()) return null;
     if (creep.wrongRoom()) return null;
-    let basicHaulers = _.filter(Game.creeps, (c) => c.memory.role === 'basicHauler' && c.memory.assignedRoom === creep.room.name);
-    if (creep.pos.findClosestByRange(FIND_STRUCTURES, {filter: (s) => s.structureType === STRUCTURE_STORAGE}) && basicHaulers.length >= 2 && creep.room.controller.level >= 4) {
-        creep.memory.energyDestination = undefined;
-        creep.memory.storageDestination = undefined;
-        creep.memory.role = 'pawn';
-    }
     //INITIAL CHECKS
     if (creep.carry.energy === 0) {
         creep.memory.hauling = false;
@@ -41,11 +35,19 @@ function role(creep) {
     } else {
         if (creep.memory.storageDestination) {
             let storageItem = Game.getObjectById(creep.memory.storageDestination);
-            if (creep.transfer(storageItem, RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
-                creep.shibMove(storageItem);
-            } else {
-                creep.memory.storageDestination = null;
-                creep.memory.path = null;
+            switch (creep.transfer(storageItem, RESOURCE_ENERGY)) {
+                case OK:
+                    creep.memory.storageDestination = undefined;
+                    break;
+                case ERR_NOT_IN_RANGE:
+                    let opportunity = creep.pos.findInRange(FIND_STRUCTURES, 1, {filter: (s) => (s.structureType === STRUCTURE_EXTENSION || s.structureType === STRUCTURE_SPAWN) && s.energy < s.energyCapacity});
+                    if (opportunity.length > 0) creep.transfer(opportunity[0], RESOURCE_ENERGY);
+                    creep.shibMove(storageItem);
+                    break;
+                case ERR_FULL:
+                    creep.memory.storageDestination = undefined;
+                    creep.findEssentials();
+                    break;
             }
         } else {
             let spawn = _.pluck(_.filter(creep.room.memory.structureCache, 'type', 'spawn'), 'id');
