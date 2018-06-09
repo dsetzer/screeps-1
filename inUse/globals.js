@@ -1,286 +1,96 @@
+let Log = require('logger');
+
 let globals = function () {
 
-    global.HOSTILES = [
-        'CaptainMuscles',
-    ];
+    global.log = new Log();
+
+    global.HOSTILES = [];
+
+    global.ATTACK_LOCALS = true;
+
+    global.FRIENDLIES = RawMemory.segments[2];
+
+    global.TEN_CPU = Game.cpu.limit === 10 || Game.shard.name === 'shard1';
 
     //Terminal
-    global.REACTION_NEEDS = [];
+    global.REACTION_NEEDS = [RESOURCE_ZYNTHIUM,
+        RESOURCE_KEANIUM, RESOURCE_UTRIUM, RESOURCE_LEMERGIUM, RESOURCE_OXYGEN, RESOURCE_HYDROGEN, RESOURCE_CATALYST];
 
-    global.BOOST_NEEDS = [RESOURCE_CATALYZED_GHODIUM_ACID];
+    global.BOOST_NEEDS = [];
 
-    global.TRADE_TARGETS = [RESOURCE_HYDROGEN,
-        RESOURCE_OXYGEN,
-        RESOURCE_UTRIUM,
-        RESOURCE_KEANIUM,
-        RESOURCE_LEMERGIUM,
-        RESOURCE_ZYNTHIUM,
-        RESOURCE_CATALYST];
+    global.TRADE_TARGETS = [];
 
     global.DO_NOT_SELL_LIST = [RESOURCE_CATALYZED_UTRIUM_ACID,
+        RESOURCE_CATALYZED_ZYNTHIUM_ACID,
         RESOURCE_CATALYZED_GHODIUM_ACID];
 
     global.TRADE_AMOUNT = 5000;
     global.ENERGY_AMOUNT = 50000;
     global.REACTION_AMOUNT = 1000;
-    global.BOOST_AMOUNT = 1000;
+    global.SELL_OFF_AMOUNT = 10000;
+    global.BOOST_AMOUNT = 10000;
 
-    global.STAGING_ROOM = 'E16S7';
+    // Reaction
+    global.MAKE_THESE_BOOSTS = [RESOURCE_CATALYZED_GHODIUM_ALKALIDE, RESOURCE_CATALYZED_LEMERGIUM_ALKALIDE, RESOURCE_CATALYZED_UTRIUM_ACID, RESOURCE_CATALYZED_GHODIUM_ACID];
+    global.END_GAME_BOOSTS = [RESOURCE_CATALYZED_GHODIUM_ALKALIDE, RESOURCE_CATALYZED_GHODIUM_ACID, RESOURCE_CATALYZED_ZYNTHIUM_ACID, RESOURCE_CATALYZED_UTRIUM_ACID, RESOURCE_CATALYZED_LEMERGIUM_ALKALIDE, RESOURCE_CATALYZED_KEANIUM_ALKALIDE, RESOURCE_CATALYZED_KEANIUM_ACID, RESOURCE_CATALYZED_LEMERGIUM_ACID, RESOURCE_CATALYZED_UTRIUM_ALKALIDE, RESOURCE_CATALYZED_ZYNTHIUM_ALKALIDE];
+    global.TIER_2_BOOSTS = [RESOURCE_GHODIUM_ALKALIDE, RESOURCE_GHODIUM_ACID, RESOURCE_ZYNTHIUM_ACID, RESOURCE_ZYNTHIUM_ALKALIDE, RESOURCE_LEMERGIUM_ALKALIDE, RESOURCE_LEMERGIUM_ACID, RESOURCE_KEANIUM_ACID, RESOURCE_KEANIUM_ALKALIDE, RESOURCE_UTRIUM_ALKALIDE, RESOURCE_UTRIUM_ACID];
+    global.TIER_1_BOOSTS = [RESOURCE_GHODIUM_HYDRIDE, RESOURCE_GHODIUM_OXIDE, RESOURCE_ZYNTHIUM_HYDRIDE, RESOURCE_ZYNTHIUM_OXIDE, RESOURCE_LEMERGIUM_OXIDE, RESOURCE_LEMERGIUM_HYDRIDE, RESOURCE_KEANIUM_OXIDE, RESOURCE_KEANIUM_HYDRIDE, RESOURCE_UTRIUM_HYDRIDE, RESOURCE_UTRIUM_OXIDE];
+    global.BASE_COMPOUNDS = [RESOURCE_GHODIUM, RESOURCE_ZYNTHIUM_KEANITE, RESOURCE_UTRIUM_LEMERGITE, RESOURCE_HYDROXIDE];
 
-    if (!Memory.war) {
-        global.PRIORITIES = {
-            // Harvesters
-            stationaryHarvester: 1,
-            basicHarvester: 1,
-            // Workers
-            worker: 7,
-            waller: 5,
-            upgrader: 4,
-            mineralHarvester: 8,
-            // Haulers
-            basicHauler: 2,
-            pawn: 4.5,
-            // Remotes
-            remoteHarvester: 3,
-            remoteHauler: 2,
-            pioneer: 2,
-            // SK
-            SKworker: 3,
-            SKattacker: 5,
-            SKsupport: 3,
-            SKhauler: 3,
-            // Military
-            attacker: 5,
-            healer: 5,
-            swarm: 3,
-            deconstructor: 5,
-            drainer: 5,
-            ranged: 5,
-            responder: 1.5,
-            raider: 5,
-            // Misc
-            claimer: 2,
-            reserver: 3.5,
-            explorer: 2,
-            scout: 2,
-        };
-    } else {
-        global.PRIORITIES = {
-            // Harvesters
-            stationaryHarvester: 1,
-            basicHarvester: 1,
-            // Workers
-            worker: 7,
-            waller: 8,
-            upgrader: 6,
-            mineralHarvester: 8,
-            // Haulers
-            basicHauler: 2,
-            pawn: 2,
-            // Remotes
-            remoteHarvester: 4,
-            remoteHauler: 3,
-            pioneer: 4,
-            // SK
-            SKworker: 6,
-            SKattacker: 6,
-            SKsupport: 6,
-            SKhauler: 6,
-            // Military
-            attacker: 5,
-            healer: 5,
-            deconstructor: 5,
-            drainer: 5,
-            ranged: 5,
-            responder: 1.5,
-            raider: 5,
-            // Misc
-            claimer: 2,
-            reserver: 5,
-            explorer: 2,
-            scout: 2,
-        };
-    }
+    global.PRIORITIES = {
+        // Harvesters
+        stationaryHarvester: 1,
+        // Workers
+        worker: 6,
+        waller: 5,
+        upgrader: 3,
+        mineralHarvester: 6,
+        // Haulers
+        hauler: 2,
+        // Remotes
+        remoteUtility: 6,
+        remoteHarvester: 4,
+        remoteHauler: 3,
+        pioneer: 6,
+        remoteResponse: 2,
+        reserver: 7,
+        // Power
+        Power: 5,
+        // SK
+        SKworker: 6,
+        SKattacker: 7,
+        SKsupport: 6,
+        SKhauler: 6,
+        // Military
+        urgent: 7,
+        high: 8,
+        medium: 9,
+        secondary: 10,
+        siege: 6,
+        harass: 5,
+        hold: 4,
+        raid: 8,
+        clean: 8,
+        swarm: 4,
+        scout: 2,
+        responder: 2,
+        // Misc
+        claimer: 3,
+        explorer: 2,
+        jerk: 2,
+    };
 
     global.SPAWN = {
-        1: {
+        0: {
             stationaryHarvester: [WORK, WORK, CARRY, MOVE],
-            basicHarvester: [WORK, WORK, CARRY, MOVE],
             worker: [MOVE, MOVE, CARRY, WORK],
+            waller: [MOVE, MOVE, CARRY, WORK],
             upgrader: [MOVE, MOVE, CARRY, WORK],
-            basicHauler: [CARRY, CARRY, CARRY, MOVE, MOVE, MOVE],
-            pawn: [CARRY, CARRY, CARRY, MOVE, MOVE, MOVE],
-            explorer: [MOVE],
-            scout: [MOVE]
-        },
-        2: {
-            stationaryHarvester: [WORK, WORK, WORK, WORK, CARRY, MOVE, MOVE],
-            basicHarvester: [WORK, WORK, CARRY, MOVE],
-            worker: [MOVE, MOVE, MOVE, MOVE, WORK, WORK, CARRY, CARRY],
-            upgrader: [MOVE, MOVE, MOVE, MOVE, WORK, WORK, CARRY, CARRY],
-            basicHauler: [CARRY, CARRY, CARRY, MOVE, MOVE, MOVE],
-            pawn: [CARRY, CARRY, CARRY, MOVE, MOVE, MOVE],
-            explorer: [MOVE],
-            scout: [MOVE]
-        },
-        3: {
-            responder: [TOUGH, ATTACK, ATTACK, ATTACK, RANGED_ATTACK, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE],
-            raider: [MOVE, MOVE, MOVE, MOVE, MOVE, CARRY, CARRY, CARRY, CARRY, CARRY],
-            claimer: [CLAIM, MOVE],
-            attacker: [TOUGH, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, ATTACK, ATTACK, ATTACK, RANGED_ATTACK],
-            swarm: [TOUGH, RANGED_ATTACK, RANGED_ATTACK, MOVE, MOVE, MOVE, MOVE, HEAL],
-            healer: [MOVE, MOVE, HEAL, HEAL],
-            basicHauler: [CARRY, CARRY, CARRY, MOVE, MOVE, MOVE],
-            pawn: [CARRY, CARRY, CARRY, MOVE, MOVE, MOVE],
-            deconstructor: [TOUGH, MOVE, MOVE, MOVE, MOVE, WORK, WORK, HEAL],
-            drainer: [WORK, MOVE, MOVE, MOVE, HEAL, HEAL],
-            stationaryHarvester: [MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, CARRY],
-            basicHarvester: [WORK, WORK, CARRY, MOVE],
-            remoteHarvester: [MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, CARRY],
-            remoteHauler: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY],
-            pioneer: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, CARRY, CARRY, CARRY, CARRY, CARRY],
-            worker: [MOVE, MOVE, MOVE, WORK, WORK, WORK, CARRY, CARRY, CARRY],
-            waller: [MOVE, MOVE, MOVE, WORK, WORK, WORK, CARRY, CARRY, CARRY],
-            upgrader: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, CARRY, CARRY, CARRY],
-            explorer: [MOVE],
-            scout: [MOVE]
-        },
-        4: {
-            responder: [TOUGH, TOUGH, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, ATTACK, ATTACK, ATTACK, ATTACK, RANGED_ATTACK, HEAL],
-            raider: [CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE],
-            claimer: [CLAIM, MOVE],
-            reserver: [CLAIM, CLAIM, MOVE, MOVE],
-            attacker: [TOUGH, TOUGH, ATTACK, ATTACK, ATTACK, ATTACK, RANGED_ATTACK, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL],
-            swarm: [TOUGH, RANGED_ATTACK, RANGED_ATTACK, MOVE, MOVE, MOVE, MOVE, HEAL],
-            drainer: [TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, HEAL, HEAL, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL],
-            deconstructor: [TOUGH, WORK, WORK, WORK, WORK, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL],
-            healer: [MOVE, MOVE, MOVE, MOVE, HEAL, HEAL, HEAL, HEAL],
-            basicHauler: [CARRY, CARRY, CARRY, MOVE, MOVE, MOVE],
-            pawn: [CARRY, CARRY, CARRY, MOVE, MOVE, MOVE],
-            resupply: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY],
-            stationaryHarvester: [MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, CARRY],
-            basicHarvester: [WORK, WORK, CARRY, MOVE],
-            remoteHarvester: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, WORK, WORK, CARRY],
-            remoteHauler: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY],
-            pioneer: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, CARRY, CARRY, CARRY, CARRY],
-            worker: [MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, CARRY, CARRY, CARRY, CARRY],
-            waller: [MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, CARRY, CARRY, CARRY, CARRY],
-            upgrader: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, WORK, WORK, CARRY, CARRY, CARRY, CARRY],
-            explorer: [MOVE],
-            scout: [MOVE]
-        },
-        5: {
-            responder: [TOUGH, TOUGH, TOUGH, TOUGH, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, RANGED_ATTACK, HEAL],
-            raider: [CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE],
-            claimer: [CLAIM, MOVE],
-            reserver: [CLAIM, CLAIM, MOVE, MOVE],
-            attacker: [TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, RANGED_ATTACK, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL],
-            swarm: [TOUGH, RANGED_ATTACK, RANGED_ATTACK, MOVE, MOVE, MOVE, MOVE, HEAL],
-            drainer: [TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, HEAL, HEAL, HEAL, HEAL, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL],
-            healer: [TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL, HEAL, HEAL, HEAL, HEAL],
-            ranged: [TOUGH, TOUGH, TOUGH, TOUGH, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL],
-            deconstructor: [TOUGH, TOUGH, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL],
-            basicHauler: [CARRY, CARRY, CARRY, MOVE, MOVE, MOVE],
-            pawn: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, WORK, MOVE],
-            resupply: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY],
-            stationaryHarvester: [MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, CARRY],
-            basicHarvester: [WORK, WORK, CARRY, MOVE],
-            remoteHarvester: [MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, CARRY],
-            remoteHauler: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY],
-            pioneer: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, CARRY, CARRY, CARRY, CARRY],
-            worker: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, WORK, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY],
-            waller: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, WORK, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY],
-            upgrader: [MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, CARRY, CARRY],
-            explorer: [MOVE],
-            scout: [MOVE]
-        },
-        6: {
-            responder: [TOUGH, TOUGH, TOUGH, TOUGH, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, HEAL],
-            raider: [CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE],
-            claimer: [CLAIM, MOVE],
-            reserver: [CLAIM, CLAIM, CLAIM, MOVE, MOVE, MOVE],
-            attacker: [TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, RANGED_ATTACK, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL],
-            swarm: [TOUGH, RANGED_ATTACK, RANGED_ATTACK, MOVE, MOVE, MOVE, MOVE, HEAL],
-            drainer: [TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, HEAL, HEAL, HEAL, HEAL, HEAL, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL],
-            healer: [TOUGH, TOUGH, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL, HEAL, HEAL, HEAL, HEAL, HEAL],
-            ranged: [TOUGH, TOUGH, TOUGH, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL],
-            deconstructor: [TOUGH, TOUGH, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL],
-            basicHauler: [CARRY, CARRY, CARRY, MOVE, MOVE, MOVE],
-            pawn: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, WORK, MOVE],
-            resupply: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY],
-            stationaryHarvester: [MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, CARRY],
-            basicHarvester: [WORK, WORK, CARRY, MOVE],
-            mineralHarvester: [MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, CARRY],
-            remoteHarvester: [MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, CARRY],
-            remoteHauler: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY],
-            pioneer: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, CARRY, CARRY, CARRY, CARRY],
-            worker: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, WORK, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY],
-            waller: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, WORK, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY],
-            upgrader: [MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, CARRY, CARRY],
-            explorer: [MOVE],
-            scout: [MOVE]
-        },
-        7: {
-            responder: [TOUGH, TOUGH, TOUGH, TOUGH, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL],
-            raider: [CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE],
-            claimer: [CLAIM, MOVE],
-            reserver: [CLAIM, CLAIM, CLAIM, MOVE, MOVE, MOVE],
-            attacker: [TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, RANGED_ATTACK, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL, HEAL],
-            swarm: [TOUGH, RANGED_ATTACK, RANGED_ATTACK, MOVE, MOVE, MOVE, MOVE, HEAL],
-            healer: [TOUGH, TOUGH, TOUGH, TOUGH, HEAL, HEAL, HEAL, HEAL, HEAL, HEAL, HEAL, HEAL, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL, HEAL],
-            ranged: [TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL, HEAL],
-            deconstructor: [TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL, HEAL, HEAL],
-            drainer: [TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, HEAL, HEAL, HEAL, HEAL, HEAL, HEAL, HEAL, HEAL, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, HEAL, HEAL],
-            pawn: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, WORK, MOVE],
-            basicHauler: [CARRY, CARRY, CARRY, MOVE, MOVE, MOVE],
-            resupply: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY],
-            stationaryHarvester: [MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, CARRY],
-            basicHarvester: [WORK, WORK, CARRY, MOVE],
-            mineralHarvester: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, CARRY, CARRY],
-            remoteHarvester: [MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, CARRY],
-            remoteHauler: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY],
-            pioneer: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, CARRY, CARRY, CARRY, CARRY],
-            worker: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY],
-            waller: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, WORK, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY],
-            upgrader: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, CARRY, CARRY],
+            hauler: [CARRY, CARRY, CARRY, MOVE, MOVE, MOVE],
             explorer: [MOVE],
             scout: [MOVE],
-            SKworker: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, WORK, WORK, CARRY, HEAL],
-            SKattacker: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, RANGED_ATTACK, RANGED_ATTACK, HEAL, HEAL, HEAL],
-            SKsupport: [TOUGH, TOUGH, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL, HEAL, HEAL, HEAL, HEAL, HEAL, HEAL, HEAL, HEAL, HEAL],
-            SKranged: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, HEAL, HEAL, HEAL, HEAL, HEAL],
-            SKhauler: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY],
-        },
-        8: {
-            responder: [TOUGH, TOUGH, TOUGH, TOUGH, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL],
-            raider: [CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE],
-            claimer: [CLAIM, MOVE],
-            reserver: [CLAIM, CLAIM, CLAIM, MOVE, MOVE, MOVE],
-            attacker: [TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, RANGED_ATTACK, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL, HEAL],
-            swarm: [TOUGH, RANGED_ATTACK, RANGED_ATTACK, MOVE, MOVE, MOVE, MOVE, HEAL],
-            healer: [TOUGH, TOUGH, TOUGH, TOUGH, HEAL, HEAL, HEAL, HEAL, HEAL, HEAL, HEAL, HEAL, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL, HEAL],
-            ranged: [TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL, HEAL],
-            deconstructor: [TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL, HEAL, HEAL],
-            drainer: [TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, TOUGH, HEAL, HEAL, HEAL, HEAL, HEAL, HEAL, HEAL, HEAL, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, HEAL, HEAL],
-            pawn: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, WORK, MOVE],
-            basicHauler: [CARRY, CARRY, CARRY, MOVE, MOVE, MOVE],
-            resupply: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY],
-            stationaryHarvester: [MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, CARRY],
-            basicHarvester: [WORK, WORK, CARRY, MOVE],
-            mineralHarvester: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, CARRY, CARRY],
-            remoteHarvester: [MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, CARRY],
-            remoteHauler: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY],
-            pioneer: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, CARRY, CARRY, CARRY, CARRY],
-            worker: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY],
-            waller: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, WORK, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY],
-            upgrader: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, WORK, CARRY],
-            explorer: [MOVE],
-            scout: [MOVE],
-            SKworker: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK, WORK, WORK, CARRY, HEAL],
-            SKattacker: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, ATTACK, RANGED_ATTACK, RANGED_ATTACK, HEAL, HEAL, HEAL],
-            SKsupport: [TOUGH, TOUGH, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, HEAL, HEAL, HEAL, HEAL, HEAL, HEAL, HEAL, HEAL, HEAL, HEAL],
-            SKranged: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK, HEAL, HEAL, HEAL, HEAL, HEAL],
-            SKhauler: [MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY, CARRY],
+            responder: [TOUGH, TOUGH, MOVE, MOVE, MOVE, ATTACK],
+            longbow: [RANGED_ATTACK, MOVE]
         }
     };
 
@@ -353,7 +163,18 @@ let globals = function () {
         , sleep: "\uD83D\uDCA4" // for when script is terminated early to refill bucket
         , testPassed: "\uD83C\uDF89" // for when scout reaches its goal location
         , testFinished: "\uD83C\uDFC1" // for when scout has finished its test run
+        , reaction: "\ud83d\udd2c"
+        , haul: "\ud83d\ude9a"
+        , respond: "\ud83d\ude93"
+        , boost: "\ud83c\udccf"
+        , nuke: "\u2622"
+        , noEntry: "\u26d4"
+        , renew: "\u26fd"
+        , greenCheck: "\u2705"
+        , crossedSword: "\u2694"
     };
+
+    global.UNIT_COST = (body) => _.sum(body, p => BODYPART_COST[p.type || p]);
 
     global.CUMULATIVE_CONTROLLER_DOWNGRADE = _.map(CONTROLLER_DOWNGRADE, (v1, k1, c1) => (_.reduce(c1, (a, v2, k2, c2) => (a + ((k2 <= k1) ? v2 : 0)), 0)));
 
@@ -429,11 +250,58 @@ let globals = function () {
     global.RCL_7_EXTENSIONS = 50;
     global.RCL_8_EXTENSIONS = 60;
 
-    global.EST_SEC_PER_TICK = Memory.stats.avgTick; // time between ticks is currently averaging ~4.84 seconds (as of 2017/05/07)
+    global.EST_SEC_PER_TICK = 4; // time between ticks is currently averaging ~4.84 seconds (as of 2017/05/07)
     global.EST_TICKS_PER_MIN = Math.ceil(60 / EST_SEC_PER_TICK); // 60s
     global.EST_TICKS_PER_DAY = Math.ceil(86400 / EST_SEC_PER_TICK); // 24h * 60m * 60s = 86400s
 
     global.toStr = (obj) => JSON.stringify(obj, null, 2); // shortcut to stringify an object (idea credit: warinternal, from the Screeps Slack)
+
+    // Boost Components
+    global.BOOST_COMPONENTS = {
+        //Tier 3
+        [RESOURCE_CATALYZED_GHODIUM_ALKALIDE]: [RESOURCE_GHODIUM_ALKALIDE, RESOURCE_CATALYST],
+        [RESOURCE_CATALYZED_GHODIUM_ACID]: [RESOURCE_GHODIUM_ACID, RESOURCE_CATALYST],
+        [RESOURCE_CATALYZED_ZYNTHIUM_ACID]: [RESOURCE_ZYNTHIUM_ACID, RESOURCE_CATALYST],
+        [RESOURCE_CATALYZED_ZYNTHIUM_ALKALIDE]: [RESOURCE_ZYNTHIUM_ALKALIDE, RESOURCE_CATALYST],
+        [RESOURCE_CATALYZED_LEMERGIUM_ALKALIDE]: [RESOURCE_LEMERGIUM_ALKALIDE, RESOURCE_CATALYST],
+        [RESOURCE_CATALYZED_LEMERGIUM_ACID]: [RESOURCE_LEMERGIUM_ACID, RESOURCE_CATALYST],
+        [RESOURCE_CATALYZED_KEANIUM_ALKALIDE]: [RESOURCE_KEANIUM_ALKALIDE, RESOURCE_CATALYST],
+        [RESOURCE_CATALYZED_KEANIUM_ACID]: [RESOURCE_KEANIUM_ACID, RESOURCE_CATALYST],
+        [RESOURCE_CATALYZED_UTRIUM_ACID]: [RESOURCE_UTRIUM_ACID, RESOURCE_CATALYST],
+        [RESOURCE_CATALYZED_UTRIUM_ALKALIDE]: [RESOURCE_UTRIUM_ALKALIDE, RESOURCE_CATALYST],
+        //Tier 2
+        [RESOURCE_GHODIUM_ACID]: [RESOURCE_GHODIUM_HYDRIDE, RESOURCE_HYDROXIDE],
+        [RESOURCE_GHODIUM_ALKALIDE]: [RESOURCE_GHODIUM_OXIDE, RESOURCE_HYDROXIDE],
+        [RESOURCE_ZYNTHIUM_ACID]: [RESOURCE_ZYNTHIUM_HYDRIDE, RESOURCE_HYDROXIDE],
+        [RESOURCE_ZYNTHIUM_ALKALIDE]: [RESOURCE_ZYNTHIUM_OXIDE, RESOURCE_HYDROXIDE],
+        [RESOURCE_LEMERGIUM_ALKALIDE]: [RESOURCE_LEMERGIUM_OXIDE, RESOURCE_HYDROXIDE],
+        [RESOURCE_LEMERGIUM_ACID]: [RESOURCE_LEMERGIUM_HYDRIDE, RESOURCE_HYDROXIDE],
+        [RESOURCE_KEANIUM_ALKALIDE]: [RESOURCE_KEANIUM_OXIDE, RESOURCE_HYDROXIDE],
+        [RESOURCE_KEANIUM_ACID]: [RESOURCE_KEANIUM_HYDRIDE, RESOURCE_HYDROXIDE],
+        [RESOURCE_UTRIUM_ACID]: [RESOURCE_UTRIUM_HYDRIDE, RESOURCE_HYDROXIDE],
+        [RESOURCE_UTRIUM_ALKALIDE]: [RESOURCE_UTRIUM_OXIDE, RESOURCE_HYDROXIDE],
+        //Tier 1
+        [RESOURCE_GHODIUM_HYDRIDE]: [RESOURCE_GHODIUM, RESOURCE_HYDROGEN],
+        [RESOURCE_GHODIUM_OXIDE]: [RESOURCE_GHODIUM, RESOURCE_OXYGEN],
+        [RESOURCE_ZYNTHIUM_HYDRIDE]: [RESOURCE_ZYNTHIUM, RESOURCE_HYDROGEN],
+        [RESOURCE_ZYNTHIUM_OXIDE]: [RESOURCE_ZYNTHIUM, RESOURCE_OXYGEN],
+        [RESOURCE_LEMERGIUM_OXIDE]: [RESOURCE_LEMERGIUM, RESOURCE_OXYGEN],
+        [RESOURCE_LEMERGIUM_HYDRIDE]: [RESOURCE_LEMERGIUM, RESOURCE_HYDROGEN],
+        [RESOURCE_KEANIUM_OXIDE]: [RESOURCE_KEANIUM, RESOURCE_OXYGEN],
+        [RESOURCE_KEANIUM_HYDRIDE]: [RESOURCE_KEANIUM, RESOURCE_HYDROGEN],
+        [RESOURCE_UTRIUM_HYDRIDE]: [RESOURCE_UTRIUM, RESOURCE_HYDROGEN],
+        [RESOURCE_UTRIUM_OXIDE]: [RESOURCE_UTRIUM, RESOURCE_OXYGEN],
+        //Base
+        [RESOURCE_GHODIUM]: [RESOURCE_ZYNTHIUM_KEANITE, RESOURCE_UTRIUM_LEMERGITE],
+        [RESOURCE_HYDROXIDE]: [RESOURCE_OXYGEN, RESOURCE_HYDROGEN],
+        [RESOURCE_ZYNTHIUM_KEANITE]: [RESOURCE_ZYNTHIUM, RESOURCE_KEANIUM],
+        [RESOURCE_UTRIUM_LEMERGITE]: [RESOURCE_UTRIUM, RESOURCE_LEMERGIUM]
+    };
+
+    global.MY_USERNAME = _.get(
+        _.find(Game.spawns) || _.find(Game.creeps) || _.get(_.find(Game.rooms, room => room.controller && room.controller.my), 'controller'),
+        ['owner', 'username'],
+    );
 
     /*
      Cached dynamic properties: Declaration
@@ -469,12 +337,12 @@ let globals = function () {
     global.parseRoomName = function (roomName) {
         let room = /^([WE])([0-9]+)([NS])([0-9]+)$/.exec(roomName);
         if (!room) {
-            return; //throw new Error("Invalid room name " + roomName);
+            return; //throw src Error("Invalid room name " + roomName);
         }
         let rx = (WORLD_WIDTH >> 1) + ((room[1] === "W") ? (-Number(room[2])) : (Number(room[2]) + 1));
         let ry = (WORLD_HEIGHT >> 1) + ((room[3] === "N") ? (-Number(room[4])) : (Number(room[4]) + 1));
         if (((rx > 0) && (rx <= WORLD_WIDTH) && (ry > 0) && (ry <= WORLD_HEIGHT)) === false) {
-            return; //throw new Error("Invalid room name " + roomName);
+            return; //throw src Error("Invalid room name " + roomName);
         }
         return {xx: rx, yy: ry};
     };
@@ -489,7 +357,7 @@ let globals = function () {
     global.toWorldPosition = function (rp) {
         let xx = (rp.x | 0), yy = (rp.y | 0);
         if (((xx >= 0) && (xx < 50) && (yy >= 0) && (yy < 50)) === false) {
-            return; //throw new Error("Invalid room position");
+            return; //throw src Error("Invalid room position");
         }
         let offset = parseRoomName(rp.roomName);
         return {
@@ -506,47 +374,92 @@ let globals = function () {
         );
     };
 
-    /*
-     For Screeps Visual: https://github.com/screepers/screeps-visual
-     NOTE: Run "loadVisual();" from the command line to see visuals when opening a new tab / steam client window.
-     */
-    /*
-     global.Visual = require('visual');
-     global.loadVisual = function() {
-     return console.log('<script>' +
-     'if(!window.visualLoaded){' +
-     '  $.getScript("https://screepers.github.io/screeps-visual/src/visual.screeps.user.js");' +
-     '  window.visualLoaded = true;' +
-     '}</script>'
-     );
-     };
-     */
+    //Get average of array
+    global.average = arr => arr.reduce((p, c) => p + c, 0) / arr.length;
 
-    global.private = false;
+// League Of Automated Nations allied users list by Kamots
+// Provides global.LOANlist as array of allied usernames. Array is empty if not in an alliance, but still defined.
+// Updates on 2nd run and then every 1001 ticks or if the global scope gets cleared.
+// Usage: After you require this file, just add this to anywhere in your main loop to run every tick: global.populateLOANlist();
+// global.LOANlist will contain an array of usernames after global.populateLOANlist() runs twice in a row (two consecutive ticks).
+    global.populateLOANlist = function (LOANuser = "LeagueOfAutomatedNations", LOANsegment = 99) {
+        if ((typeof RawMemory.setActiveForeignSegment == "function") && !!~['shard0', 'shard1', 'shard2'].indexOf(Game.shard.name)) { // For running in sim or private servers without errors
+            if ((typeof Memory.lastLOANtime == "undefined") || (typeof global.LOANlist == "undefined")) {
+                Memory.lastLOANtime = Game.time - 1001;
+                global.LOANlist = [];
+            }
 
-    global.agentRun = function () {//*
-        let statsDataJSON = "";
-        if (private) {
-            const privObj = {priv: Memory.stats};
-            statsDataJSON = JSON.stringify(privObj);
+            if (Game.time >= (Memory.lastLOANtime + 1000)) {
+                RawMemory.setActiveForeignSegment(LOANuser, LOANsegment);
+            }
+
+            if ((Game.time >= (Memory.lastLOANtime + 1001)) && (typeof RawMemory.foreignSegment != "undefined") && (RawMemory.foreignSegment.username == LOANuser) && (RawMemory.foreignSegment.id == LOANsegment)) {
+                Memory.lastLOANtime = Game.time;
+                let allMyRooms = _.filter(Game.rooms, (aRoom) => (typeof aRoom.controller != "undefined") && aRoom.controller.my);
+                if (allMyRooms.length == 0) {
+                    global.LOANlist = [];
+                    return false;
+                }
+                let myUsername = allMyRooms[0].controller.owner.username;
+                if (RawMemory.foreignSegment.data == null) return false;
+                else {
+                    let LOANdata = JSON.parse(RawMemory.foreignSegment.data);
+                    let LOANdataKeys = Object.keys(LOANdata);
+                    for (let iL = (LOANdataKeys.length - 1); iL >= 0; iL--) {
+                        if (LOANdata[LOANdataKeys[iL]].indexOf(myUsername) >= 0) {
+                            global.LOANlist = LOANdata[LOANdataKeys[iL]];
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+            }
+            return true;
         } else {
-            statsDataJSON = JSON.stringify(Memory.stats)
+            global.LOANlist = [];
+            return false;
         }
-        const passToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoaWJkaWIiLCJpYXQiOjE0OTU5ODI2MjYsImF1ZCI6InNjcmVlcHNwbC51cyIsImlzcyI6InNjcmVlcHNwbC51cyJ9.LXs1xjahDuw58WUits-9BXaVepVTh5C-mUfJxUBi70M';
-        const output = `<SCRIPT>
-if(!document.ticks)document.ticks={};
-if(document.ticks['t${Game.time}']===undefined){
- document.ticks['t${Game.time}']=true;
- let x=new XMLHttpRequest();
- x.open("POST", "https://screepspl.us/api/stats/submit", true);
- x.setRequestHeader("Authorization","JWT " + "${passToken}");
- x.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
- x.onreadystatechange=function(){if(x.readyState===XMLHttpRequest.DONE&&x.status===200){console.log('resp',x.responseText);}};
- x.send(JSON.stringify(${statsDataJSON}))
-}
-</SCRIPT>`;
-        console.log(output.split('\n').join(';'));
-//*/
+    };
+
+    global.shuffle = function (array) {
+        let counter = array.length;
+
+        // While there are elements in the array
+        while (counter > 0) {
+            // Pick a random index
+            let index = Math.floor(Math.random() * counter);
+
+            // Decrease counter by 1
+            counter--;
+
+            // And swap the last element with it
+            let temp = array[counter];
+            array[counter] = array[index];
+            array[index] = temp;
+        }
+
+        return array;
+    };
+
+    global.getLevel = function (room) {
+        let energy = room.energyCapacityAvailable;
+        if (energy >= RCL_1_ENERGY && energy < RCL_2_ENERGY) {
+            return 1;
+        } else if (energy >= RCL_2_ENERGY && energy < RCL_3_ENERGY) {
+            return 2
+        } else if (energy >= RCL_3_ENERGY && energy < RCL_4_ENERGY) {
+            return 3
+        } else if (energy >= RCL_4_ENERGY && energy < RCL_5_ENERGY) {
+            return 4
+        } else if (energy >= RCL_5_ENERGY && energy < RCL_6_ENERGY) {
+            return 5
+        } else if (energy >= RCL_6_ENERGY && energy < RCL_7_ENERGY) {
+            return 6
+        } else if (energy >= RCL_7_ENERGY && energy < RCL_8_ENERGY) {
+            return 7
+        } else if (energy >= RCL_8_ENERGY) {
+            return 8
+        }
     }
 };
 

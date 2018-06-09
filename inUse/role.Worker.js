@@ -10,57 +10,73 @@ const profiler = require('screeps-profiler');
  * @return {null}
  */
 function role(creep) {
-    if (creep.renewalCheck()) return creep.shibMove(creep.pos.findClosestByRange(FIND_MY_SPAWNS));
     //INITIAL CHECKS
+    if (!creep.memory.boostAttempt) return creep.tryToBoost(['build']);
     if (creep.borderCheck()) return null;
     if (creep.wrongRoom()) return null;
     if (creep.carry.energy === 0) {
         creep.memory.working = null;
+        creep.memory.constructionSite = undefined;
+        creep.memory.task = undefined;
     }
-    if (creep.carry.energy >= creep.carryCapacity * 0.75) {
-        creep.memory.working = true;
-    }
-    if (creep.memory.working === true) {
-        let newRamps = creep.pos.findInRange(FIND_MY_STRUCTURES, 3, {filter: (s) => s.structureType === STRUCTURE_RAMPART && s.hits < 500000});
-        if (newRamps.length > 0) {
-            creep.repair(newRamps[0]);
-        } else {
-            creep.findConstruction();
-            if (creep.memory.task === 'build' && creep.room.memory.responseNeeded !== true) {
+    if (creep.isFull) creep.memory.working = true;
+        if (creep.memory.working === true) {
+            creep.memory.source = undefined;
+            if (!creep.memory.constructionSite || !Game.getObjectById(creep.memory.constructionSite)) {
+                creep.memory.constructionSite = undefined;
+                creep.memory.task = undefined;
+                creep.findConstruction();
+            }
+            if (creep.memory.task === 'build') {
                 let construction = Game.getObjectById(creep.memory.constructionSite);
-                if (creep.build(construction) === ERR_NOT_IN_RANGE) {
-                    creep.shibMove(construction, {range: 3});
+                switch (creep.build(construction)) {
+                    case OK:
+                        return null;
+                    case ERR_NOT_IN_RANGE:
+                        creep.shibMove(construction, {range: 3});
+                        break;
+                    case ERR_RCL_NOT_ENOUGH:
+                        creep.memory.constructionSite = undefined;
+                        creep.memory.task = undefined;
+                        break;
+                    case ERR_INVALID_TARGET:
+                        creep.memory.constructionSite = undefined;
+                        creep.memory.task = undefined;
+                        break;
                 }
             } else {
                 creep.findRepair(creep.room.controller.level);
                 if (creep.memory.task === 'repair' && creep.memory.constructionSite) {
                     let repairNeeded = Game.getObjectById(creep.memory.constructionSite);
-                    if (creep.repair(repairNeeded) === ERR_NOT_IN_RANGE) {
-                        creep.shibMove(repairNeeded, {range: 3});
+                    switch (creep.repair(repairNeeded)) {
+                        case OK:
+                            return null;
+                        case ERR_NOT_IN_RANGE:
+                            creep.shibMove(repairNeeded, {range: 3});
+                            break;
+                        case ERR_RCL_NOT_ENOUGH:
+                            delete creep.memory.constructionSite;
                     }
-                } else if (creep.upgradeController(Game.rooms[creep.memory.assignedRoom].controller) === ERR_NOT_IN_RANGE) {
-                    creep.shibMove(Game.rooms[creep.memory.assignedRoom].controller);
+                } else if (creep.upgradeController(Game.rooms[creep.memory.overlord].controller) === ERR_NOT_IN_RANGE) {
+                    creep.shibMove(Game.rooms[creep.memory.overlord].controller);
+                    creep.memory.constructionSite = undefined;
+                    creep.memory.task = undefined;
                 }
             }
-        }
-    }
-    else {
-        if (creep.memory.energyDestination) {
-            creep.withdrawEnergy();
         } else {
-            let storage = creep.pos.findClosestByRange(FIND_STRUCTURES, {filter: (s) => s.structureType === STRUCTURE_STORAGE && s.store[RESOURCE_ENERGY] > 0});
-            if (storage) {
-                if (creep.withdraw(storage, RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
-                    creep.shibMove(storage);
-                }
+            if (creep.memory.energyDestination) {
+                creep.withdrawEnergy();
             } else {
-                creep.findEnergy();
-            }
-            if (!creep.memory.energyDestination && creep.room.controller.level <= 2) {
-                let source = creep.pos.findClosestByRange(FIND_SOURCES);
-                if (creep.harvest(source) === ERR_NOT_IN_RANGE) creep.shibMove(source)
+                if (!creep.findEnergy()) {
+                    if (!creep.memory.energyDestination && !creep.memory.source) {
+                        let source = creep.pos.getClosestSource();
+                        if (source) creep.memory.source = source.id;
+                    } else if (creep.memory.source) {
+                        let source = Game.getObjectById(creep.memory.source);
+                        if (creep.harvest(source) === ERR_NOT_IN_RANGE) creep.shibMove(source)
+                    }
+                }
             }
         }
     }
-}
 module.exports.role = profiler.registerFN(role, 'workerRole');

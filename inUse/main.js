@@ -1,184 +1,135 @@
 //modules
 //Setup globals and prototypes
-require("globals")();
-require("prototype.roomPosition");
-require("prototype.room");
-require("prototype.room.creepSpawning");
+require("require");
 let profiler = require('screeps-profiler');
 let _ = require('lodash');
-let screepsPlus = require('screepsplus');
-require('module.pathFinder');
+let hive = require('main.Hive');
+let cleanUp = require('module.Cleanup');
+let segments = require('module.segmentManager');
+let shib = require("shibBench");
+//profiler.enable();
+//global.lastMemoryTick = undefined;
 
-profiler.enable();
-
-module.exports.loop = function () {
+module.exports.loop = function() {
     profiler.wrap(function () {
-        Memory.stats.cpu.init = Game.cpu.getUsed();
+        log.d('Initiating Tick');
+        let mainCpu = Game.cpu.getUsed();
 
-        //Get tick duration
-        if (!Memory.stats.tickOldEpoch) Memory.stats.tickOldEpoch = Math.round(new Date() / 1000);
-        Memory.stats.tickLength = Math.round(new Date() / 1000) - Memory.stats.tickOldEpoch;
-        Memory.stats.tickOldEpoch = Math.round(new Date() / 1000);
+        //Logging level
+        Memory.loggingLevel = 4; //Set level 1-5 (5 being most info)
 
-        //Get avg over 100
-        if (!Memory.stats.avgTickArray) Memory.stats.avgTickArray = [];
-        if (!Memory.stats.avgTick) Memory.stats.avgTick = 3;
-        Memory.stats.avgTickArray.push(Memory.stats.tickLength);
-        if (Game.time % 100 === 0) {
-            Memory.stats.avgTick = _.sum(Memory.stats.avgTickArray)/Memory.stats.avgTickArray.length
-            Memory.stats.avgTickArray = undefined;
+        // Get Tick Length
+        log.d('Getting Tick Length');
+        let d = new Date();
+        let seconds = _.round(d.getTime() / 1000, 2);
+        let lastTick = Memory.lastTick || seconds;
+        Memory.lastTick = seconds;
+        Memory.tickLengthArray = Memory.tickLengthArray || [];
+        let tickLength = seconds - lastTick;
+        if (Memory.tickLengthArray.length < 50) {
+            Memory.tickLengthArray.push(tickLength)
+        } else {
+            Memory.tickLengthArray.shift();
+            Memory.tickLengthArray.push(tickLength)
+        }
+        Memory.tickLength = average(Memory.tickLengthArray);
+
+        //Update allies
+        log.d('Updating LOAN List');
+        populateLOANlist();
+
+        //Must run modules
+        log.d('Utility Modules');
+        segments.segmentManager();
+        cleanUp.cleanup();
+
+        //Bucket Check
+        log.d('Bucket Check');
+        if (Game.cpu.bucket < 100 * Game.cpu.tickLimit && Game.cpu.bucket < Game.cpu.limit * 10) {
+            log.e('Skipping tick ' + Game.time + ' due to lack of CPU.');
+            return;
         }
 
-        //GRAFANA
-        screepsPlus.collect_stats();
+        //Hive Mind
+        log.d('Initiate Hive');
+        hive.hiveMind();
 
-        //CLEANUP
-        if (Game.time % 100 === 0) {
-            cleanPathCacheByUsage(); //clean path and distance caches
-            cleanDistanceCacheByUsage();
-        }
-        if (Game.time % EST_TICKS_PER_DAY === 0) Memory.pathCache = undefined;
-        for (let name in Memory.creeps) {
-            if (!Game.creeps[name]) {
-                delete Memory.creeps[name];
-            }
-        }
-
-        //Room Management
-        if (Game.cpu.getUsed() < Game.cpu.limit) {
-            let roomController = require('module.roomController');
-            roomController.roomControl();
-        }
-
-        //Military management
-        let attackController = require('military.attack');
-        let defenseController = require('military.defense');
-        defenseController.controller();
-        attackController.controller();
-
-        //Creep Management
-        let creepController = require('module.creepController');
-        creepController.creepControl();
-
-        //Tower Management
-        let towerController = require('module.towerController');
-        towerController.towerControl();
-
-        //Link Management
-        if (Game.cpu.getUsed() < Game.cpu.limit) {
-            let linkController = require('module.linkController');
-            linkController.linkControl();
-        }
-
-        //Lab Management
-        if ((Game.cpu.getUsed() <= Game.cpu.limit * 0.50 || Game.cpu.bucket >= 1000) && Game.time % 10 === 0) {
-                //let labController = require('module.labController');
-                // labController.labControl();
-        }
-
-        //Terminal Management
-        if ((Game.cpu.getUsed() <= Game.cpu.limit * 0.50 || Game.cpu.bucket >= 1000) && Game.time % 25 === 0) {
-                let terminalController = require('module.terminalController');
-                terminalController.terminalControl();
-        }
-
-        //Alliance List Management
-        let doNotAggress = [
-            {"username": "Shibdib", "status": "alliance"},
-            {"username": "PostCrafter", "status": "alliance"},
-            {"username": "Rising", "status": "alliance"},
-            {"username": "wages123", "status": "alliance"},
-            {"username": "SpaceRedleg", "status": "alliance"},
-            {"username": "Donat", "status": "alliance"},
-            {"username": "KageJ", "status": "alliance"},
-            {"username": "BrinkDaDrink", "status": "alliance"},
-            {"username": "Tyac", "status": "alliance"},
-            {"username": "herghost", "status": "alliance"},
-            {"username": "kirk", "status": "alliance"},
-            {"username": "arcath", "status": "alliance"},
-            {"username": "Smokeman", "status": "alliance"},
-            {"username": "Pav234", "status": "alliance"},
-            {"username": "Picoplankton", "status": "alliance"},
-            {"username": "Troedfach", "status": "alliance"},
-            {"username": "KOR_Solidarity", "status": "alliance"},
-            {"username": "starking1", "status": "alliance"},
-            {"username": "droben", "status": "nap"}
-        ];
-        let doNotAggressArray = [
-            'Shibdib',
-            'PostCrafter',
-            'Rising',
-            'wages123',
-            'SpaceRedleg',
-            'Donat',
-            'KageJ',
-            'BrinkDaDrink',
-            'Tyac',
-            'herghost',
-            'kirk',
-            'arcath',
-            'Smokeman',
-            'Pav234',
-            'Picoplankton',
-            'Troedfach',
-            'KOR_Solidarity',
-            'starking1',
-            'droben'
-        ];
-        let mainRaw = {
-            "api": {
-                "version": "draft",
-                "update": 19939494
-            },
-            "channels": {
-                "needs": {
-                    "protocol": "roomneeds",
-                    "segments": [50],
-                    "update": 20155510
-                },
-            }
-        };
-        let roomNeeds = {
-            "W53N83": {
-                "power": true,
-                "G": true
-            }
-        };
-        RawMemory.segments[1] = JSON.stringify(doNotAggress);
-        RawMemory.segments[2] = JSON.stringify(doNotAggressArray);
-        if (JSON.stringify(mainRaw) !== RawMemory.segments[10]) RawMemory.segments[10] = JSON.stringify(mainRaw);
-        if (JSON.stringify(roomNeeds) !== RawMemory.segments[50]) RawMemory.segments[50] = JSON.stringify(roomNeeds);
-        RawMemory.setPublicSegments([1, 2, 10, 50]);
-        RawMemory.setDefaultPublicSegment(1);
-        RawMemory.setActiveSegments([1, 2, 10, 50]);
-
-        //Cache Foreign Segments
-        RawMemory.setActiveForeignSegment("Bovius");
-        if (RawMemory.foreignSegment && RawMemory.foreignSegment.username === "Bovius" && RawMemory.foreignSegment.id === 0) {
-            // Can't use data if you can't see it.
-            Memory.marketCache = RawMemory.foreignSegment.data;
-        }
-
-        Memory.stats.cpu.used = Game.cpu.getUsed();
-        let used = Memory.stats.cpu.used;
-        if (Memory.stats.cpu.used > Game.cpu.limit * 2) console.log("<font color='#adff2f'>Abnormally High CPU Usage - " + used + " CPU</font>");
+        log.d('Benchmark Processed');
+        shib.shibBench('Total', mainCpu);
+        shib.processBench();
     });
 };
 
-function cleanPathCacheByUsage() {
-    if(Memory.pathCache && _.size(Memory.pathCache) > 1500) { //1500 entries ~= 100kB
-        let sorted = _.sortBy(Memory.pathCache, 'uses');
-        let overage = (_.size(Memory.pathCache) - 1500) + 100;
-        console.log('Cleaning Path cache (Over max size by '+overage+')...');
-        Memory.pathCache = _.slice(sorted, overage, _.size(Memory.pathCache));
-    }
-}
+requestBench = function (ticks, notify = false) {
+    delete Memory._benchmark;
+    Memory.reportBench = Game.time + ticks;
+    Memory.reportBenchNotify = notify;
+    log.a('Benchmark Queued');
+};
 
-function cleanDistanceCacheByUsage() {
-    if(Memory.distanceCache && _.size(Memory.distanceCache) > 1500) { //1500 entries ~= 100kB
-        let sorted = _.sortBy(Memory.distanceCache, 'uses');
-        let overage = (_.size(Memory.distanceCache) - 1500) + 100;
-        console.log('Cleaning Distance cache (Over max size by '+overage+')...');
-        Memory.distanceCache = _.slice(sorted, overage, _.size(Memory.distanceCache));
+currentStats = function (notify = false) {
+    let sorted = _.sortBy(Memory._benchmark, 'avg');
+    log.e('---------------------------------------------------------------------------');
+    log.e('~~~~~BENCHMARK REPORT~~~~~');
+    if (notify) Game.notify('~~~~~BENCHMARK REPORT~~~~~');
+    let totalTicks;
+    let overallAvg;
+    let bucketAvg;
+    let bucketTotal;
+    for (let key in sorted) {
+        if (sorted[key]['title'] === 'Total') {
+            totalTicks = sorted[key]['tickCount'];
+            overallAvg = sorted[key]['avg'];
+            continue;
+        }
+        if (sorted[key]['title'] === 'bucket') {
+            bucketAvg = sorted[key]['avg'];
+            bucketTotal = sorted[key]['used'];
+            continue;
+        }
+        log.a(sorted[key]['title'] + ' - Was Used ' + sorted[key]['useCount'] + ' times. ||| Average CPU Used: ' + _.round(sorted[key]['avg'], 3) + '. ||| Total CPU Used: ' + _.round(sorted[key]['avg'] * sorted[key]['useCount'], 3) + '. ||| Peak CPU Used: ' + _.round(sorted[key]['max'], 3));
+        if (notify) Game.notify(sorted[key]['title'] + ' - Was Used ' + sorted[key]['useCount'] + ' times. ||| Average CPU Used: ' + _.round(sorted[key]['avg'], 3) + '. ||| Total CPU Used: ' + _.round(sorted[key]['avg'] * sorted[key]['useCount'], 3) + '. ||| Peak CPU Used: ' + _.round(sorted[key]['max'], 3));
     }
-}
+    log.e('Ticks Covered: ' + totalTicks + '. Average CPU Used: ' + _.round(overallAvg, 3));
+    log.e('Total Bucket Used: ' + bucketTotal + '. Current Bucket: ' + Game.cpu.bucket);
+    log.e('---------------------------------------------------------------------------');
+    if (notify) Game.notify('Ticks Covered: ' + totalTicks + '. Average CPU Used: ' + _.round(overallAvg, 3));
+    if (notify) Game.notify('Total Bucket Used: ' + bucketTotal + '. Current Bucket: ' + Game.cpu.bucket);
+};
+
+resetBench = function () {
+    delete Memory._benchmark;
+    delete Memory.reportBench;
+    delete Memory.reportBenchNotify;
+    log.a('Benchmarks Reset');
+};
+
+abandonRoom = function (room) {
+    if (!Game.rooms[room] || !Game.rooms[room].memory.extensionHub) return log.e(room + ' does not appear to be owned by you.');
+    for (let key in Game.rooms[room].creeps) {
+        Game.rooms[room].creeps[key].suicide();
+    }
+    let overlordFor = _.filter(Game.creeps, (c) => c.memory && c.memory.overlord === room);
+    for (let key in overlordFor) {
+        overlordFor[key].suicide();
+    }
+    for (let key in Game.rooms[room].structures) {
+        Game.rooms[room].structures[key].destroy();
+    }
+    for (let key in Game.rooms[room].constructionSites) {
+        Game.rooms[room].constructionSites[key].remove();
+    }
+    delete Game.rooms[room].memory;
+    Game.rooms[room].controller.unclaim();
+};
+
+nukes = function (target) {
+    let nukes = _.filter(Game.structures, (s) => s.structureType === STRUCTURE_NUKER && s.energy === s.energyCapacity && s.ghodium === s.ghodiumCapacity && !s.cooldown);
+    if (target) nukes = _.filter(Game.structures, (s) => s.structureType === STRUCTURE_NUKER && s.energy === s.energyCapacity && s.ghodium === s.ghodiumCapacity && !s.cooldown && Game.map.getRoomLinearDistance(s.room.name, target) <= 10);
+    if (!nukes.length && !target) return log.a('No nukes available');
+    if (!nukes.length && target) return log.a('No nukes available in range of ' + target);
+    for (let key in nukes) {
+        if (target) log.a(nukes[key].room.name + ' has a nuclear missile available that is in range of ' + target);
+        if (!target) log.a(nukes[key].room.name + ' has a nuclear missile available.')
+    }
+};

@@ -5,81 +5,71 @@
 let _ = require('lodash');
 const profiler = require('screeps-profiler');
 
-/**
- * @return {null}
- */
 function role(creep) {
-    if (creep.renewalCheck(6)) return creep.shibMove(creep.pos.findClosestByRange(FIND_MY_SPAWNS));
-    if (creep.getActiveBodyparts(WORK) > 0 && creep.pos.checkForRoad()[0] && creep.pos.checkForRoad()[0].hits < creep.pos.checkForRoad()[0].hitsMax * 0.50) creep.repair(creep.pos.checkForRoad()[0]);
-    if (creep.memory.boostAttempt !== true) {
-        let desiredReactions = [RESOURCE_CATALYZED_GHODIUM_ACID];
-        let count = 1;
-        for (let i = 0; i < desiredReactions.length; i++) {
-            let lab = creep.pos.findClosestByRange(FIND_STRUCTURES, {filter: (s) => s.structureType === STRUCTURE_LAB && s.mineralType === desiredReactions[i] && s.mineralAmount >= 30 && s.energy >= 20});
-            if (lab) {
-                count++;
-                switch (lab.boostCreep(creep)) {
-                    case ERR_NOT_IN_RANGE:
-                        creep.shibMove(lab);
-                        break;
-                    case ERR_NOT_FOUND:
-                        count--;
-                        break;
-                    case OK:
-                        creep.memory.boosted = true;
-                }
+        if (creep.memory.boostAttempt !== true) return creep.tryToBoost(['upgrade']);
+        //ANNOUNCE
+        if (_.filter(Game.creeps, (c) => (c.memory.announcer === true) && c.memory.overlord === creep.memory.overlord).length === 0) creep.memory.announcer = true;
+        if (creep.memory.announcer) {
+            let sentence = ['-', '#overlords', '-'];
+            if (creep.room.memory.responseNeeded) {
+                if (creep.room.memory.threatLevel === 1) sentence = sentence.concat(['FPCON', 'ALPHA']);
+                if (creep.room.memory.threatLevel === 2) sentence = sentence.concat(['FPCON', 'BRAVO']);
+                if (creep.room.memory.threatLevel === 3) sentence = sentence.concat(['FPCON', 'CHARLIE']);
+                if (creep.room.memory.threatLevel >= 4) sentence = sentence.concat(['FPCON', 'DELTA']);
+            } else {
+                sentence = sentence.concat(['FPCON', 'NORMAL'])
             }
+            if (Memory._badBoyArray && Memory._badBoyArray.length) {
+                sentence = sentence.concat(['-', 'THREAT', 'LIST', '-']);
+                sentence = sentence.concat(Memory._badBoyArray);
+            }
+            let word = Game.time % sentence.length;
+            creep.say(sentence[word], true);
         }
-        if (count === 1) {
-            creep.memory.boostAttempt = true;
-        }
-        return null;
-    }
-    if (_.filter(Game.creeps, (c) => (c.memory.role === 'basicHarvester' || c.memory.role === 'stationaryHarvester') && c.memory.assignedRoom === creep.memory.assignedRoom).length === 0) creep.memory.role = 'stationaryHarvester';
-    //ANNOUNCE
-    let sentence = ['Spawn', 'More', 'Overlords', '#Overlords'];
-    let word = Game.time % sentence.length;
-    creep.say(sentence[word], true);
-    //INITIAL CHECKS
-    if (creep.borderCheck()) return null;
-    if (creep.wrongRoom()) return null;
-    if (creep.carry.energy === 0) {
-        creep.memory.working = null;
-    } else if (creep.carry.energy >= creep.carryCapacity * 0.75) {
-        creep.memory.working = true;
-    }
-    if (creep.memory.working === true) {
-        if (creep.upgradeController(Game.rooms[creep.memory.assignedRoom].controller) === ERR_NOT_IN_RANGE) {
-            creep.shibMove(Game.rooms[creep.memory.assignedRoom].controller, {range: 3});
-        }
-        if (creep.memory.terminal && creep.pos.getRangeTo(Game.getObjectById(creep.memory.terminal)) <= 1 && Game.getObjectById(creep.memory.terminal).store[RESOURCE_ENERGY] > 0) creep.withdraw(Game.getObjectById(creep.memory.terminal), RESOURCE_ENERGY);
-        if (creep.memory.controllerLink && creep.pos.getRangeTo(Game.getObjectById(creep.memory.controllerLink)) <= 1 && Game.getObjectById(creep.memory.controllerLink).energy > 0) creep.withdraw(Game.getObjectById(creep.memory.controllerLink), RESOURCE_ENERGY);
-    } else {
+        //INITIAL CHECKS
+        if (creep.borderCheck()) return null;
+        if (creep.wrongRoom()) return null;
         let link = Game.getObjectById(creep.room.memory.controllerLink);
-        if (creep.memory.energyDestination) {
-            creep.withdrawEnergy();
-        } else if (link && link.energy > 0) {
-            if (creep.withdraw(link, RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
-                creep.shibMove(link);
-            }
+        let container = Game.getObjectById(creep.room.memory.controllerContainer);
+        let terminal = creep.room.terminal;
+        if (creep.carry.energy === 0) creep.memory.working = undefined;
+        if (creep.isFull) creep.memory.working = true;
+        if (creep.memory.working === true) {
+            if (creep.upgradeController(Game.rooms[creep.memory.overlord].controller) === ERR_NOT_IN_RANGE) creep.shibMove(Game.rooms[creep.memory.overlord].controller, {range: 3});
+            if (container && creep.pos.getRangeTo(container) <= 1 && container.store[RESOURCE_ENERGY] > 0) creep.withdraw(container, RESOURCE_ENERGY);
+            if (terminal && creep.pos.getRangeTo(terminal) <= 1 && terminal.store[RESOURCE_ENERGY] > 0) creep.withdraw(terminal, RESOURCE_ENERGY);
+            if (link && creep.pos.getRangeTo(link) <= 1 && link.energy > 0) creep.withdraw(link, RESOURCE_ENERGY);
         } else {
-            if (!creep.memory.terminal) {
-                let terminal = creep.pos.findClosestByRange(FIND_STRUCTURES, {filter: (s) => s.structureType === STRUCTURE_TERMINAL && s.store[RESOURCE_ENERGY] > 0});
-                if (terminal) creep.memory.terminal = terminal.id;
-            }
-            let terminal = Game.getObjectById(creep.memory.terminal);
-            if (terminal && creep.pos.getRangeTo(terminal) < 5 && terminal.store[RESOURCE_ENERGY] > ENERGY_AMOUNT * 0.5) {
-                if (creep.withdraw(terminal, RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
-                    creep.shibMove(terminal);
+            if (creep.memory.energyDestination) {
+                creep.withdrawEnergy();
+            } else if (container && container.store[RESOURCE_ENERGY] > 0) {
+                switch (creep.withdraw(container, RESOURCE_ENERGY)) {
+                    case OK:
+                        break;
+                    case ERR_NOT_IN_RANGE:
+                        creep.shibMove(container);
+                }
+            } else if (link && link.energy > 0) {
+                switch (creep.withdraw(link, RESOURCE_ENERGY)) {
+                    case OK:
+                        break;
+                    case ERR_NOT_IN_RANGE:
+                        creep.shibMove(link);
                 }
             } else {
-                creep.findEnergy();
-            }
-            if (!creep.memory.energyDestination && creep.room.controller.level <= 2) {
-                let source = creep.pos.findClosestByRange(FIND_SOURCES);
-                if (creep.harvest(source) === ERR_NOT_IN_RANGE) creep.shibMove(source)
+                if (!container) {
+                    let container = creep.pos.findClosestByRange(creep.room.structures, {filter: (s) => s.structureType === STRUCTURE_CONTAINER && s.pos.getRangeTo(s.room.controller) <= 1});
+                    if (container) creep.room.memory.controllerContainer = container.id;
+                }
+                if (!link && !creep.memory.energyDestination) {
+                    if (!creep.findEnergy(6)) {
+                        let source = creep.pos.getClosestSource();
+                        if (creep.harvest(source) === ERR_NOT_IN_RANGE) creep.shibMove(source)
+                    }
+                } else {
+                    creep.idleFor(5);
+                }
             }
         }
-    }
 }
 module.exports.role = profiler.registerFN(role, 'upgraderWorkers');

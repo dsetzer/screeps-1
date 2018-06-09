@@ -7,6 +7,7 @@ const profiler = require('screeps-profiler');
 
 function role(creep) {
     creep.borderCheck();
+    if (!creep.memory.boostAttempt) return creep.tryToBoost(['heal', 'tough', 'ranged']);
     // Harass
     if (creep.memory.operation && creep.memory.operation === 'harass') creep.harassRoom();
     // Escort
@@ -14,9 +15,7 @@ function role(creep) {
     // Hold
     if (creep.memory.operation && creep.memory.operation === 'hold') creep.holdRoom();
     // Swarm
-    if (creep.memory.operation && creep.memory.operation === 'swarm') creep.swarmRoom();
-    // Swarm
-    if (creep.memory.operation && creep.memory.operation === 'swarmHarass') creep.swarmHarassRoom();
+    if (creep.memory.operation && creep.memory.operation === 'templarSiege') creep.templarSiege();
 
 }
 

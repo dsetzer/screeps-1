@@ -1,0 +1,1527 @@
+Chocolatey v0.10.8
+chocolatey 0.10.11 [Approved]
+adobereader 2015.007.20033.02 [Approved] Downloads cached for licensed users
+flashplayerplugin 30.0.0.113 [Approved] Downloads cached for licensed users
+GoogleChrome 67.0.3396.7900 [Approved] Downloads cached for licensed users
+jre8 8.0.171 [Approved]
+chocolatey-core.extension 1.3.3 [Approved]
+flashplayeractivex 30.0.0.113 [Approved]
+Firefox 60.0.2 [Approved]
+winrar 5.50 [Approved]
+7zip.install 18.5 [Approved]
+AdobeAIR 28.0.0.127 [Approved] Downloads cached for licensed users
+vlc 3.0.3 [Approved]
+notepadplusplus.install 7.5.6 [Approved]
+adobereader-update 18.011.20040 [Approved] Downloads cached for licensed users
+javaruntime 8.0.151 [Approved]
+git.install 2.17.1.2 [Approved]
+putty.install 0.70.0.20171219 [Approved]
+nodejs.install 10.4.0 [Approved]
+autohotkey.portable 1.1.29.01 [Approved]
+git 2.17.1.2 [Approved]
+skype 8.23.0.10 [Approved] Downloads cached for licensed users
+PowerShell 5.1.14409.20180105 [Approved]
+ccleaner 5.43.6522 [Approved] Downloads cached for licensed users
+sysinternals 2018.5.31 [Approved] Downloads cached for licensed users
+jdk8 8.0.172 [Approved]
+notepadplusplus 7.5.6 [Approved]
+Silverlight 5.1.50907.0 [Approved] Downloads cached for licensed users
+7zip 18.5 [Approved]
+openssh 7.7.1.1 [Approved]
+flashplayerppapi 30.0.0.113 [Approved] Downloads cached for licensed users
+adobeshockwaveplayer 12.2.8.198 [Approved]
+Quicktime 7.7.9.20161124 [Approved] Downloads cached for licensed users
+winlogbeat 6.2.4 [Approved] Downloads cached for licensed users
+InkScape 0.92.3 [Approved]
+adblockplusie 1.4 [Approved] Downloads cached for licensed users
+filezilla 3.33.0 [Approved]
+curl 7.60.0 [Approved]
+PDFCreator 3.2.1 [Approved]
+putty 0.70.0.20171219 [Approved]
+KB2919442 1.0.20160915 [Approved]
+KB2919355 1.0.20160915 [Approved]
+DotNet4.5 4.5.20120822 [Approved]
+Atom 1.27.2 [Approved] Downloads cached for licensed users
+Wget 1.19.4 [Approved]
+DotNet3.5 3.5.20160716 [Approved] - Possibly broken
+7zip.commandline 16.02.0.20170209 [Approved]
+paint.net 4.0.21 [Approved]
+ruby 2.5.1.1 [Approved]
+VisualStudioCode 1.23.1.20180513 [Approved]
+vcredist2010 10.0.40219.2 [Approved]
+php 7.2.5 [Approved]
+nodejs 10.4.0 [Approved]
+libreoffice 5.4.4.20180111 [Approved]
+WindowsAzurePowershell 1.6.0.20180408 [Approved] - Possibly broken
+putty.portable 0.70.0.20171219 [Approved]
+StrawberryPerl 5.26.2.1 [Approved] Downloads cached for licensed users
+FoxitReader 9.1.0.5096 [Approved]
+keepass.install 2.39.1 [Approved] Downloads cached for licensed users
+chocolatey-windowsupdate.extension 1.0.2 [Approved]
+vcredist2008 9.0.30729.6161 [Approved] Downloads cached for licensed users
+procexp 16.21.0.20170716 [Approved] Downloads cached for licensed users
+malwarebytes 3.5.1.252210540 [Approved] Downloads cached for licensed users
+KB2999226 1.0.20170509 [Approved]
+python2 2.7.15 [Approved] Downloads cached for licensed users
+vcredist140 14.12.25810 [Approved]
+cdburnerxp 4.5.8.6795 [Approved]
+Ghostscript.app 9.23 [Approved]
+KB3033929 1.0.3 [Approved]
+treesizefree 4.1.2.3 [Approved]
+KB3035131 1.0.1 [Approved]
+gimp 2.10.2 [Approved]
+winscp 5.13.2 [Approved]
+thunderbird 52.8.0 [Approved]
+virtualbox 5.2.12 [Approved]
+UrlRewrite 2.1.20171010 [Approved] Downloads cached for licensed users
+vcredist2015 14.0.24215.20170201 [Approved]
+wsus-offline-update 11.4 [Approved] Downloads cached for licensed users
+chromium 67.0.3396.79 [Approved]
+CutePDF 3.2 [Approved] Downloads cached for licensed users
+ChocolateyGUI 0.16.0 [Approved]
+teamviewer 13.1.3629 [Approved] Downloads cached for licensed users
+iTunes 12.7.5.9 [Approved]
+microsoft-build-tools 15.0.26320.2 [Approved]
+vcredist2013 12.0.40660.20180427 [Approved]
+dropbox 51.4.66 [Approved] Downloads cached for licensed users
+python3 3.6.5 [Approved]
+winscp.install 5.13.2 [Approved]
+git-lfs 2.4.2 [Approved]
+webdeploy 3.6.20170627 [Approved] Downloads cached for licensed users
+ConEmu 18.5.28.0 [Approved] Downloads cached for licensed users
+wireshark 2.6.1 [Approved] Downloads cached for licensed users
+GitHub 3.2.0.0 [Approved] - Possibly broken
+nscp 0.5.0.62 [Approved] Downloads cached for licensed users
+azure-cli 2.0.32 [Approved] Downloads cached for licensed users
+Cygwin 2.10.0 [Approved]
+python 3.6.5 [Approved]
+NuGet.CommandLine 4.6.2 [Approved]
+DotNet4.6.1 4.6.01055.20170308 [Approved]
+DotNet4.5.2 4.5.2.20140902 [Approved]
+visualstudio2017enterprise 15.7.3.0 [Approved]
+youtube-dl 2018.06.04 [Approved]
+awscli 1.15.34 [Approved] Downloads cached for licensed users
+FirefoxESR 60.0 [Approved]
+OctopusTools 4.37.0 [Approved]
+Opera 53.0.2907.88 [Approved] Downloads cached for licensed users
+mm-choco.extension 0.0.4.1 [Approved]
+npmtaskrunner 1.1.35 [Approved] Downloads cached for licensed users
+vcredist2012 11.0.61031 [Approved] Downloads cached for licensed users
+NSSM 2.24.101.20180116 [Approved]
+vim 8.0.604 [Approved]
+azcopy 3.1.0 [Approved] Downloads cached for licensed users
+AutoRuns 13.82 [Approved] Downloads cached for licensed users
+DotNet4.0 4.0.30319.20141222 [Approved]
+windirstat 1.1.2.20161210 [Approved]
+nunit.install 3.4.0 [Approved] Downloads cached for licensed users
+dotnetcore-sdk 2.1.300 [Approved] Downloads cached for licensed users
+TotalCommander 9.12.0.20180528 [Approved]
+java.jdk 7.0.75.20150520 [Approved] - Possibly broken
+win32-openssh 2016.05.30.20160922 [Approved]
+netfx-4.7.1-devpack 4.7.2558.0 [Approved] Downloads cached for licensed users
+sql-server-management-studio 14.0.17254.0 [Approved] Downloads cached for licensed users
+winscp.portable 5.13.2 [Approved]
+google-chrome-x64 47.0.2526.81 [Approved]
+IrfanView 4.51 [Approved]
+BoxStarter.Common 2.11.0 [Approved]
+javaruntime-platformspecific 7.0.79.20161125 [Approved]
+autohotkey.install 1.1.29.01 [Approved]
+BoxStarter.WinConfig 2.11.0 [Approved]
+citrix-receiver 4.12 [Approved] Downloads cached for licensed users
+calibre 3.25.0 [Approved]
+boxstarter.bootstrapper 2.11.0 [Approved]
+boxstarter.chocolatey 2.11.0 [Approved]
+poshgit 0.7.3.1 [Approved]
+keepass 2.39.1 [Approved]
+boxstarter 2.11.0 [Approved]
+sublimetext2 2.0.2.2222 [Approved] Downloads cached for licensed users
+SublimeText3 3.1.1 [Approved] Downloads cached for licensed users
+golang 1.10.2 [Approved]
+OctopusDeploy.Tentacle 3.21.0 [Approved] Downloads cached for licensed users
+GitVersion.Portable 3.6.4 [Approved]
+Boxstarter.HyperV 2.11.0 [Approved]
+SourceTree 2.5.5 [Approved] Downloads cached for licensed users
+googledrive 2.34.5075.1619 [Approved] Downloads cached for licensed users
+yarn 1.7.0 [Approved] Downloads cached for licensed users
+classic-shell 4.3.1.20180405 [Approved]
+puppet 3.8.7 [Approved] Downloads cached for licensed users
+7zip.portable 18.5 [Approved]
+vagrant 2.1.1 [Approved] Downloads cached for licensed users
+OpenSSL.Light 1.1.0.70000000 [Approved]
+mysql.workbench 6.3.8 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+webpi 5.0
+autohotkey 1.1.29.01 [Approved]
+DotNet4.5.1 4.5.1.20140606 [Approved]
+greenshot 1.2.10.6 [Approved] Downloads cached for licensed users
+powershell4 4.0.0.20140724 [Approved]
+Paket.PowerShell 4.8.8 [Approved]
+InnoSetup 5.5.9.20171105 [Approved]
+git-lfs.install 2.4.2 [Approved]
+lessmsi 1.6.1 [Approved]
+zabbix-agent 3.4.6 [Approved]
+dotnet4.7 4.7.2053.0 [Approved] Downloads cached for licensed users
+chocolatey-uninstall.extension 1.2.0 [Approved]
+audacity 2.2.2 [Approved]
+kvrt 2018.03.08.0450 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+cmake 3.11.3 [Approved]
+puppet-agent 5.5.1 [Approved] Downloads cached for licensed users
+android-sdk 25.2.3.1 [Approved] Downloads cached for licensed users
+cmake.install 3.11.3 [Approved]
+dotnet4.7.1 4.7.2558.0 [Approved] Downloads cached for licensed users
+pgadmin3 1.22.2.20170504 [Approved]
+Cmder 1.3.5 [Approved] Downloads cached for licensed users
+hg 4.6.1 [Approved] Downloads cached for licensed users
+dolphin 5.0 [Approved] Downloads cached for licensed users
+dotnet4.6.2 4.6.01590.20170129 [Approved] - Possibly broken
+SQLite 3.24.0 [Approved]
+tortoisesvn 1.10.0.28176 [Approved]
+nodejs-lts 8.11.2 [Approved]
+steam 2.10.91.910301 [Approved] Downloads cached for licensed users
+pester 4.3.1 [Approved]
+crystaldiskinfo 7.6.0 [Approved]
+k-litecodecpackfull 14.1.5 [Approved] Downloads cached for licensed users
+baretail 3.50.0.20120226 [Approved]
+docker 17.10.0 [Approved] Downloads cached for licensed users
+qbittorrent 4.1.1 [Approved]
+mingw 5.3.0 [Approved] Downloads cached for licensed users
+webexplayer 31.14.4 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+poweriso 7.1 [Approved] Downloads cached for licensed users
+webpicmd 7.1.50430.20141001 [Approved]
+PowerShellGAC 1.1.0 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+jq 1.5 [Approved] Downloads cached for licensed users
+procmon 3.50 [Approved] Downloads cached for licensed users
+googleearth 7.1.8.30360001 [Approved] Downloads cached for licensed users
+dotnetcore-windowshosting 2.1.0 [Approved]
+winmerge 2.14.0.20170224 [Approved] Downloads cached for licensed users
+ccenhancer 4.5.1 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+spotify 1.0.66.478 [Approved] - Possibly broken
+libreoffice-fresh 6.0.4 [Approved] Downloads cached for licensed users
+vcredist2005 8.1.0.20160118 [Approved] Downloads cached for licensed users
+python-x86_32 3.5.2.20170425 [Approved] - Possibly broken
+Gpg4win 3.1.1 [Approved]
+QGIS 3.0.3 [Approved] Downloads cached for licensed users
+nxlog 2.9.1716 [Approved]
+TeamCityAgent 2.2.1 [Approved]
+imagemagick.app 7.0.7.38 [Approved] Downloads cached for licensed users
+nodejs.commandline 6.11.0 [Approved]
+peazip 6.6.0 [Approved]
+TortoiseGit 2.6.0.0 [Approved] - Possibly broken
+webexie 29.7.1.6
+Brackets 1.12 [Approved]
+svn 1.8.17 [Approved] Downloads cached for licensed users
+redis-64 3.0.503 [Approved]
+VisualStudio2015Community 2015.03.03 [Approved]
+WinPcap 4.1.3.20161116 [Approved] Downloads cached for licensed users
+ffmpeg 4.0 [Approved]
+irfanviewplugins 4.51 [Approved]
+filebeat 6.2.4 [Approved] Downloads cached for licensed users
+mysql 5.7.18 [Approved] Downloads cached for licensed users
+gradle 4.8 [Approved] Downloads cached for licensed users
+evernote 6.11.2.7027 [Approved] Downloads cached for licensed users
+hashtab 6.0.0.3401 [Approved]
+SublimeText3.PackageControl 2.0.0.20140915 [Approved] - Possibly broken
+pdf24 8.2.2 [Approved] Downloads cached for licensed users
+CrystalReports2010Runtime 13.0.18 [Approved] Downloads cached for licensed users
+DotNet4.6 4.6.00081.20150925 [Approved] - Possibly broken
+imagemagick 7.0.7.38 [Approved]
+cpu-z 1.85 [Approved]
+slack 3.1.1 [Approved] Downloads cached for licensed users
+resharper-platform 112.0.20180529.225627 [Approved] Downloads cached for licensed users
+nmap 7.70 [Approved]
+PhantomJS 2.1.1 [Approved] Downloads cached for licensed users
+pandoc 2.1.3 [Approved]
+keepass-keepasshttp 1.8.4.220170629 [Approved]
+pip 1.2.0 [Approved] - Possibly broken
+carbon 2.5.0 [Approved]
+pidgin 2.12.0 [Approved] Downloads cached for licensed users
+unzip 6.0 [Approved] Downloads cached for licensed users
+ruby2.devkit 4.7.2.2013022402 [Approved] - Possibly broken
+ScriptCs 0.17.1 [Approved]
+vcredist2017 14.12.25810 [Approved] - Possibly broken
+chocolatey-visualstudio.extension 1.7.0 [Approved]
+bginfo 4.25 [Approved] Downloads cached for licensed users
+libreoffice-help 5.2.0 [Approved] - Possibly broken
+cpu-z.install 1.85 [Approved]
+Revo.Uninstaller 2.0.2 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+lastpass 4.1.56.20180530 [Approved] Downloads cached for licensed users
+ActivePerl 5.24.2.2403 [Approved] Downloads cached for licensed users
+ant 1.10.1 [Approved] Downloads cached for licensed users
+postgresql 9.6.8 [Approved]
+Office365ProPlus 2016.20170321 [Approved] Downloads cached for licensed users
+MicrosoftSecurityEssentials 4.5.0216.0 [Approved] - Possibly broken
+MsSqlServerManagementStudio2014Express 12.2.5000.20170905 [Approved]
+webexnetworkplayer 31.14.4 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+webexeditor 31.14.4 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+chocolatey-fosshub.extension 0.6.1 [Approved]
+dd 0.5 [Approved] - Possibly broken
+Everything 1.4.1895.20180530 [Approved]
+tightvnc 2.8.11 [Approved] Downloads cached for licensed users
+codecov 1.0.1 [Approved] Downloads cached for licensed users
+meteor 0.0.2 [Approved] Downloads cached for licensed users
+tor-browser 7.5.4 [Approved] Downloads cached for licensed users
+consul 1.1.0 [Approved]
+PSWindowsUpdate 1.5.1
+visualstudio2017-installer 1.0.2 [Approved]
+gotomeeting 7.17.0 [Approved] - Possibly broken
+gitextensions 2.50.01 [Approved] Downloads cached for licensed users
+defraggler 2.22.995 [Approved] Downloads cached for licensed users
+codeblocks 17.12 [Approved]
+openvpn 2.4.4 [Approved]
+pdfsam.install 3.3.2 [Approved] Downloads cached for licensed users
+googleearthpro 7.3.1.4507 [Approved] Downloads cached for licensed users
+Paket 5.171.0 [Approved]
+ChocolateyPackageUpdater 0.6.13.0 [Approved]
+resharper 2018.1.2 [Approved]
+erlang 20.3 [Approved] Downloads cached for licensed users
+mbca 2.0.0.1 - Possibly broken
+ninja 1.7.2 [Approved] Downloads cached for licensed users
+windows-sdk-8.1 8.100.26654.0 [Approved]
+KB2533623 1.0.2 [Approved]
+lockhunter 3.2 [Approved] Downloads cached for licensed users
+NugetPackageExplorer 4.4.3 [Approved]
+eclipse 4.7.3 [Approved]
+PyCharm-community 2018.1.4 [Approved] Downloads cached for licensed users
+OpenOffice 4.1.5 [Approved]
+intellijidea-community 2018.1.4 [Approved] Downloads cached for licensed users
+foobar2000 1.3.17 [Approved]
+beyondcompare 4.2.4.22795 [Approved]
+autoit.commandline 3.3.14.2 [Approved] Downloads cached for licensed users
+Far 3.0.5225 [Approved] Downloads cached for licensed users
+Git-Credential-Manager-for-Windows 1.15.2 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+R.Project 3.5.0.20180424 [Approved]
+msbuild-sonarqube-runner 4.3.0 [Approved]
+chef-client 14.0.202 [Approved] Downloads cached for licensed users
+f.lux 4.73 [Approved]
+glaryutilities-free 5.80 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+microsoft-teams 1.1.00.13555 [Approved] Downloads cached for licensed users
+mongodb 3.6.0 [Approved] - Possibly broken
+owncloud-client 2.4.1.9270 [Approved]
+prometheus-wmi-exporter.install 0.3.3 [Approved]
+ie11 0.2 [Approved]
+NAnt 0.92.2 [Approved] Downloads cached for licensed users
+adwcleaner 7.0.8.0 [Approved]
+microsoftazurestorageexplorer 1.2.0 [Approved] Downloads cached for licensed users
+OctopusDeploy 2018.6.0 [Approved] Downloads cached for licensed users
+anaconda3 5.1.0 [Approved]
+miktex 2.9.6643 [Approved] - Possibly broken
+chefdk 2.5.3 [Approved]
+adblockpluschrome 1.12.4 [Approved]
+swig 3.0.9 [Approved] Downloads cached for licensed users
+smartftp 9.0.2576.0 [Approved]
+notepadplusplus.commandline 7.5.6 [Approved]
+dotPeek 2018.1.2 [Approved]
+sumatrapdf 3.1.2 [Approved]
+speccy 1.32.740 [Approved] Downloads cached for licensed users
+nsis.install 3.03 [Approved] Downloads cached for licensed users
+XnView 2.44 [Approved] Downloads cached for licensed users
+Office365Business 16.0.9119.3601 [Approved] Downloads cached for licensed users
+sumatrapdf.commandline 3.1.2 [Approved] Downloads cached for licensed users
+wixtoolset 3.11.1 [Approved]
+unchecky 1.2 [Approved] Downloads cached for licensed users
+ketarin 1.8.9 [Approved]
+avastfreeantivirus 18.4.3895.0 [Approved] Downloads cached for licensed users
+nsis 3.03 [Approved]
+cyg-get 1.2.1 [Approved]
+rufus 3.0 [Approved]
+Tomcat 8.5.12 [Approved] Downloads cached for licensed users
+newrelic-dotnet 8.2.216.0 [Approved]
+AndroidStudio 3.1.2.0 [Approved]
+visualstudio2017buildtools 15.7.3.0 [Approved]
+VirtualBox.ExtensionPack 5.1.10.20161223 [Approved]
+rdcman 2.7.1406.20160916 [Approved] Downloads cached for licensed users
+windows-adk-all 10.0.17134.0 [Approved] Downloads cached for licensed users
+NewRelicWindowsServerAgent 3.2.6.0
+docker-for-windows 18.03.1.17513 [Approved] Downloads cached for licensed users
+crystaldiskinfo.portable 7.6.0 [Approved] Downloads cached for licensed users
+Wix35 3.5.2519.20130612 [Approved] - Possibly broken
+VirtualCloneDrive 5.5.0.20160317 [Approved] Downloads cached for licensed users
+peazip.install 6.6.0 [Approved]
+cyberduck 6.6.1.28146 [Approved] Downloads cached for licensed users
+packer 1.2.4 [Approved]
+ConsoleZ 1.18.3.18143 [Approved] Downloads cached for licensed users
+make 3.81.4
+imgburn 2.5.8.20170708 [Approved] Downloads cached for licensed users
+blender 2.79.2 [Approved]
+Console2 2.0.148.20140727 [Approved]
+partitionwizard 10.0 [Approved] - Possibly broken
+R.Studio 1.1.447 [Approved] Downloads cached for licensed users
+jenkins 2.89.2 [Approved]
+k-litecodecpackmega 14.1.5 [Approved] Downloads cached for licensed users
+gpg4win-vanilla 2.3.4.20170919 [Approved]
+mp3tag 2.88.1 [Approved] Downloads cached for licensed users
+kubernetes-cli 1.10.4 [Approved]
+docker-compose 1.21.2 [Approved] Downloads cached for licensed users
+KB4019990 1.0.0 [Approved]
+zotero-standalone 5.0.48 [Approved]
+PowerGUI 3.8.0.129 [Approved] - Possibly broken
+sharex 12.1.1 [Approved] Downloads cached for licensed users
+rabbitmq 3.7.3 [Approved] Downloads cached for licensed users
+PDFXchangeEditor 7.0.325.1 [Approved]
+netbeans-jee 8.1 [Approved] Downloads cached for licensed users
+typescript-vs2015 2.9.1.0 [Approved] Downloads cached for licensed users
+aimp 4.51.2077 [Approved] Downloads cached for licensed users
+netfx-4.5.2-devpack 4.5.5165101 [Approved] Downloads cached for licensed users
+mpc-hc 1.7.13 [Approved] Downloads cached for licensed users
+combofix 18.3.14.1 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+kdiff3 0.9.98 [Approved]
+Vivaldi 1.15.1147.42 [Approved] Downloads cached for licensed users
+telegram.install 1.2.15 [Approved] Downloads cached for licensed users
+komodo-edit 11.0.2.18122 [Approved] Downloads cached for licensed users
+dotnetcore-runtime.install 2.1.0 [Approved] Downloads cached for licensed users
+gittfs 0.29.0 [Approved] Downloads cached for licensed users
+sql-server-express 14.1801.3958.1 [Approved] Downloads cached for licensed users
+tortoisehg 4.5.2 [Approved] Downloads cached for licensed users
+uTorrent 3.5.3.44428 [Approved] Downloads cached for licensed users
+sumatrapdf.install 3.1.2 [Approved] Downloads cached for licensed users
+imagemagick.tool 7.0.7.38 [Approved] Downloads cached for licensed users
+Elixir 1.6.5 [Approved]
+psake 4.7.0 [Approved]
+360ts 10.0.0.1088 [Approved] Downloads cached for licensed users
+yumi 2.0.5.6 [Approved]
+Shotcut 17.11 [Approved] Downloads cached for licensed users
+postman 6.1.3 [Approved] Downloads cached for licensed users
+nvm 1.1.5 [Approved]
+filezilla.commandline 3.26.2 [Approved] Downloads cached for licensed users
+msysgit 1.7.10.20120526 [Approved]
+docfx 2.36.1 [Approved] Downloads cached for licensed users
+p4 2018.1 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+1password 6.8.534 [Approved] Downloads cached for licensed users
+MsSqlServer2014Express 12.2.5000.20170905 [Approved]
+mongodb.install 3.6.3 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+SQL2008R2.NativeClient 10.50.4000.0 [Approved] Downloads cached for licensed users
+mysql-connector 8.0.11 [Approved] Downloads cached for licensed users
+nirlauncher 1.20.40 [Approved]
+terraform 0.11.7 [Approved]
+mkvtoolnix 23.0.0 [Approved]
+doublecmd 0.8.2.20180406 [Approved] Downloads cached for licensed users
+bazel 0.14.0 [Approved]
+dotnetcore-runtime 2.1.0 [Approved]
+doxygen.portable 1.8.11 [Approved] Downloads cached for licensed users
+filebot 4.7.9 [Approved] Downloads cached for licensed users
+msys2 20180531.0.0 [Approved]
+handbrake.install 1.1.0 [Approved]
+miktex.install 2.9.6643 [Approved] Downloads cached for licensed users
+Ghostscript 9.23 [Approved]
+imageresizerapp 3.1.1 [Approved] Downloads cached for licensed users
+mRemoteNG 1.75.7012.1681402 [Approved] Downloads cached for licensed users
+vscode-powershell 1.0.0.20161116 [Approved]
+nunit 3.4.0 [Approved]
+bind-toolsonly 9.12.1 [Approved] Downloads cached for licensed users
+docker-machine 0.14.0 [Approved]
+selenium-chrome-driver 2.39 [Approved] Downloads cached for licensed users
+GoogleChrome-AllUsers 26.0.1410.64
+pstools 1.2012.04.12 [Approved] Downloads cached for licensed users
+libreoffice-oldstable 5.3.7.20180111 [Approved]
+splunkforwarder 6.5.1.1 [Approved]
+du 1.61 [Approved] Downloads cached for licensed users
+vmware-horizon-client 4.4.0 [Approved] Downloads cached for licensed users
+dart-sdk 1.24.3 [Approved] Downloads cached for licensed users
+ilspy 3.1 [Approved] Downloads cached for licensed users
+opencover.portable 4.6.519 [Approved] Downloads cached for licensed users
+unitywebplayer 4.6.0 [Approved] - Possibly broken
+notepad2 4.2.25.20160422 [Approved] Downloads cached for licensed users
+dotnetcore 2.1.0 [Approved]
+vcbuildtools 2015.4 [Approved] Downloads cached for licensed users
+legitest 2018.2.4.503 [Approved]
+AzureStorageExplorer 5.0.0.20180315 [Approved]
+SQL2008R2.CmdLine 10.50.1600.1
+teamcity 2017.2.3 [Approved] Downloads cached for licensed users
+dbeaver 5.1.0 [Approved]
+jmol 14.29.15 [Approved]
+PDFXChangeViewer 2.5.317.20161116 [Approved]
+vscode-csharp 1.0.0 [Approved]
+Graphviz 2.38.0.20171119 [Approved]
+vscode-icons 1.0.0.20170116 [Approved]
+bluej-bundled 3.1.7 [Approved] Downloads cached for licensed users
+chromedriver 2.381 [Approved] Downloads cached for licensed users
+intellijidea-ultimate 2018.1.4 [Approved] Downloads cached for licensed users
+unity 2018.1.3 [Approved] Downloads cached for licensed users
+geforce-game-ready-driver 398.11 [Approved] Downloads cached for licensed users
+sumo 5.5.7.388 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+netfx-4.6.1-devpack 4.6.01055.00 [Approved] - Possibly broken
+aspnetmvc4.install 4.0.20714.0 [Approved]
+hugo 0.41 [Approved] Downloads cached for licensed users
+cmder.portable 1.1.4.102 [Approved]
+veracrypt 1.22 [Approved] Downloads cached for licensed users
+iis-arr 3.0.20180207 [Approved] Downloads cached for licensed users
+cccp 2015.10.18 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+logdna-agent 1.5.1 [Approved]
+telegram 1.2.15 [Approved]
+ghc 8.4.3 [Approved]
+RSAT 2.1803.0.20180604 [Approved]
+MobaXTerm 10.4 [Approved] Downloads cached for licensed users
+linqpad 5.31.0 [Approved]
+TimberWinR 1.4.17.0 [Approved]
+SQL2012.NativeClient 2011.110.7001.0 [Approved] Downloads cached for licensed users
+anydesk 4.1.2 [Approved] Downloads cached for licensed users
+linqpad4 4.58.0 [Approved]
+neovim 0.2.2.20180420 [Approved] Downloads cached for licensed users
+adblockplus-firefox 2.7.1 [Approved]
+graphviz.portable 2.38.20180209 [Approved] Downloads cached for licensed users
+haskell-stack 1.7.1 [Approved] Downloads cached for licensed users
+ultravnc 1.2120 [Approved] Downloads cached for licensed users
+doxygen.install 1.8.13.20171205 [Approved] Downloads cached for licensed users
+Emacs 24.5.0.20150611 [Approved] Downloads cached for licensed users
+git-credential-winstore 2.0.0.20151206 [Approved]
+canopy 1.0 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+windbg 10.0.10586.15 [Approved] Downloads cached for licensed users
+VS2012.ShellIntegratedRedist 1.0
+MySql.Utilities 1.6.5 [Approved] Downloads cached for licensed users
+nano 2.5.3 [Approved] Downloads cached for licensed users
+kodi 17.6.0.20171213 [Approved] Downloads cached for licensed users
+server-jre8 8.0.172 [Approved]
+windowsrepair 4.0.15 [Approved] Downloads cached for licensed users
+WhatsApp 0.2.9229 [Approved] Downloads cached for licensed users
+PsGet 1.0.4.407 [Approved] - Possibly broken
+0ad 0.0.22 [Approved] Downloads cached for licensed users
+handbrake 1.1.0 [Approved]
+vcredist-all 1.0.0 [Approved]
+x-lite 5.2.0.90534 [Approved] Downloads cached for licensed users
+osquery 3.2.4 [Approved]
+databasenet 25.0.6733 [Approved] Downloads cached for licensed users
+AzurePowerShell 6.2.1 [Approved]
+mediainfo 18.05 [Approved] Downloads cached for licensed users
+DotNet4.6-TargetPack 4.6.00081.20150925 [Approved] - Possibly broken
+TeraCopy 3.26.2 [Approved] Downloads cached for licensed users
+MarkdownMonster 1.11.12 [Approved] Downloads cached for licensed users
+elasticsearch 6.2.4 [Approved] Downloads cached for licensed users
+HipChat 4.30.3.1665 [Approved] Downloads cached for licensed users
+autoit 3.3.14.5 [Approved]
+windows-sdk-7.1 7.1.7600.30514 [Approved]
+smplayer 18.5.0 [Approved]
+Clover 3.2.3 [Approved] - Possibly broken
+ant-renamer 2.12.0.20170526 [Approved]
+grepwin 1.6.17 [Approved] Downloads cached for licensed users
+javaruntime-preventasktoolbar 1.2
+texmaker 5.0.2 [Approved]
+sliksvn 1.8.5.20140421 [Approved]
+clink 0.4.8 [Approved] Downloads cached for licensed users
+Spark 2.8.2 [Approved] Downloads cached for licensed users
+geforce-experience 3.14.0.139 [Approved] Downloads cached for licensed users
+selenium-ie-driver 3.12.0 [Approved] Downloads cached for licensed users
+SQL2014.ClrTypes 12.0.4100.1 [Approved]
+GoodSync 10.8.4 [Approved] Downloads cached for licensed users
+freefilesync 10.1 [Approved]
+xmind 3.7.5 [Approved] Downloads cached for licensed users
+dotCover 2018.1.2 [Approved]
+cabal 2.2.0.0 [Approved]
+exiftool 10.91 [Approved] Downloads cached for licensed users
+gitlink 3.0.0 [Approved]
+checksum 0.2.0 [Approved]
+notepad2-mod 4.2.25.99800 [Approved] Downloads cached for licensed users
+python2-x86_32 2.7.11.20170425 [Approved] - Possibly broken
+cdex 2.00 [Approved] Downloads cached for licensed users
+PowerDelivery 2.2.79 [Approved]
+directx 9.29.1974.0 [Approved] Downloads cached for licensed users
+VisualStudioCommunity2013 12.0.21005.1 [Approved]
+launchy 2.5.0.20140301 [Approved]
+composer 4.8.0 [Approved]
+ditto 3.21.223.0 [Approved]
+teamspeak 3.1.9 [Approved] Downloads cached for licensed users
+kitty 0.70.0.5 [Approved]
+geogebra 5.0.134.0 [Approved]
+hwinfo.install 5.84 [Approved]
+Gow 0.8.0
+audacity-lame 3.99.3.20171217 [Approved] Downloads cached for licensed users
+Sudo 1.1.0 [Approved]
+seafile-client 6.1.8 [Approved]
+NSwagStudio 11.17.13 [Approved]
+avgantivirusfree 18.1817.103 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+unxUtils 1.0.0.0 [Approved] Downloads cached for licensed users
+iis-externalcache 1.1.20151123 [Approved] - Possibly broken
+Kindle 1.23.50133 [Approved] Downloads cached for licensed users
+opencppcoverage 0.9.7.0 [Approved] Downloads cached for licensed users
+adblockplusfirefox 0.0.0.1 - Possibly broken
+directorymonitor 2.12.2.0 [Approved] Downloads cached for licensed users
+filezilla.server 0.9.60 [Approved] Downloads cached for licensed users
+netfx-4.6.2-devpack 4.6.01590.20170129 [Approved] - Possibly broken
+PowerBI 2.59.5135.421 [Approved] Downloads cached for licensed users
+nomacs 3.8.0 [Approved]
+cyberfox 52.8.0 [Approved] Downloads cached for licensed users
+MakeMKV 1.12.0 [Approved]
+Minikube 0.27.0 [Approved]
+cs-script 3.28.4.0 [Approved]
+vmwarevsphereclient 6.0.0.5112508 [Approved] Downloads cached for licensed users
+git.commandline 2.11.0.20170203 [Approved]
+vscode 1.24.0 [Approved] Downloads cached for licensed users
+mpv 2017.12.25 [Approved]
+AWSTools.Powershell 1.1.1120.20130916 [Approved]
+cyberduck.install 6.4.6.27773 [Approved] Downloads cached for licensed users
+p4v 2018.1 [Approved] Downloads cached for licensed users
+vim-tux.install 8.1.0034 [Approved]
+sqlserver-cmdlineutils 14.0 [Approved] Downloads cached for licensed users
+netfx-4.5.1-devpack 4.5.50932 [Approved] - Possibly broken
+rvtools 3.6.4 [Approved] - Possibly broken
+fusioninventory-agent.install 2.4 [Approved] Downloads cached for licensed users
+selenium-gecko-driver 0.20.1 [Approved] Downloads cached for licensed users
+vcpython27 9.0.0.30729 [Approved] Downloads cached for licensed users
+deluge 1.3.15 [Approved] Downloads cached for licensed users
+telegraf 1.6.4 [Approved] Downloads cached for licensed users
+google-drive-file-stream 25.157.185.3 [Approved] Downloads cached for licensed users
+mono 5.12.0.226 [Approved] Downloads cached for licensed users
+origin 10.5.20.63112 [Approved]
+sbt 1.1.4.16042018 [Approved]
+driverbooster 5.1.0.0 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+SourceCodePro 2.030.0 [Approved] Downloads cached for licensed users
+linqpad5 5.31.0 [Approved]
+processhacker 2.39 [Approved]
+texstudio 2.12.8 [Approved] Downloads cached for licensed users
+fileshredder 2.5.1 [Approved] Downloads cached for licensed users
+HxD 1.7.7.20170419 [Approved]
+ansicon 1.66.0.20150407 [Approved] Downloads cached for licensed users
+krita 4.0.3 [Approved]
+saltminion 2018.3.0.1 [Approved]
+Octave 3.6.4
+exercism-io-cli 2.4.1 [Approved] Downloads cached for licensed users
+yed 3.18.1 [Approved]
+gpu-z 2.9.0 [Approved]
+linqpad5.install 5.31.0 [Approved] Downloads cached for licensed users
+VisualStudio2015Professional 2015.03.03 [Approved]
+VisualStudio2017Community 15.7.3.0 [Approved]
+libjpeg-turbo 1.2.1.201304081 [Approved]
+isorecorder 3.0.0 [Approved] Downloads cached for licensed users
+upx 3.94 [Approved] Downloads cached for licensed users
+Boxstarter.Azure 2.9.26 [Approved] - Possibly broken
+rsync 5.5.0.20180530 [Approved] Downloads cached for licensed users
+Git-TF 2.0.3.20131219 [Approved]
+rdm 13.5.8.0 [Approved] Downloads cached for licensed users
+arduino 1.8.5 [Approved]
+duckietv 1.1.5 [Approved] Downloads cached for licensed users
+teraterm 4.99 [Approved] Downloads cached for licensed users
+tablacus 18.6.2 [Approved]
+discord 0.0.301 [Approved]
+linqpad4.install 4.58.0 [Approved] Downloads cached for licensed users
+heroku-cli 7.0.86.0 [Approved]
+vim-tux 8.1.0034 [Approved]
+processhacker.install 2.39 [Approved] Downloads cached for licensed users
+cmake.portable 3.11.3 [Approved]
+DotNet-4.6.2 4.6.01586.001 [Approved] - Possibly broken
+fsviewer 6.5 [Approved] Downloads cached for licensed users
+dependencywalker 2.2.6000.9 [Approved] Downloads cached for licensed users
+msdeploy3 3.0
+aspnetcore-runtimepackagestore 2.1.0 [Approved] Downloads cached for licensed users
+resharper-clt.portable 2018.1.2 [Approved] Downloads cached for licensed users
+adb 27.0.1 [Approved] Downloads cached for licensed users
+Posh-GitHub 0.0.2
+proget 4.8.4 [Approved] Downloads cached for licensed users
+dartium 1.24.3 [Approved] Downloads cached for licensed users
+jrt 8.1.4 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+P4Merge 2018.1.1637591 [Approved] Downloads cached for licensed users
+pdfsam 3.3.2 [Approved] - Possibly broken
+WebStorm 2018.1.4 [Approved] Downloads cached for licensed users
+SqlServerLocalDb 11.0.2318.0 [Approved] - Possibly broken
+Recuva 1.53.1087 [Approved] Downloads cached for licensed users
+nvm.portable 1.1.5 [Approved] Downloads cached for licensed users
+SRWareIron 66.0.3450.000 [Approved]
+hwinfo 5.84 [Approved]
+teamviewer.host 13.1.3629 [Approved] Downloads cached for licensed users
+imdisk 2.0.9.20170202 [Approved] Downloads cached for licensed users
+seek-dsc 1.0.10 [Approved]
+palemoon 27.9.2 [Approved] Downloads cached for licensed users
+superantispyware 6.0.1204 [Approved] - Possibly broken
+VBoxGuestAdditions.install 4.3.18 - Possibly broken
+hyper 2.0.0 [Approved] Downloads cached for licensed users
+cmdermini 1.3.5 [Approved] Downloads cached for licensed users
+OptiPNG 0.7.7 [Approved]
+dotTrace 2018.1.2 [Approved]
+aspnetmvc.install 3.1.0.20140613 [Approved]
+server-jre 8.0.172 [Approved]
+MSAccess2010-redist-x64 1.1 [Approved]
+ctags 5.8.1
+webpicommandline 7.1.50430.0 [Approved]
+electron 1.8.4 [Approved] Downloads cached for licensed users
+rainmeter 4.1.0.2989 [Approved] Downloads cached for licensed users
+seek-dsc-messagequeue 1.0.10 [Approved]
+buildmaster 5.3.6 [Approved] - Possibly broken
+meld 3.16.2 [Approved] Downloads cached for licensed users
+aria2 1.34.0.1 [Approved] Downloads cached for licensed users
+gitkraken 3.3.3 [Approved] Downloads cached for licensed users
+chirp.install 2018.05.19 [Approved] Downloads cached for licensed users
+buildmaster.agent.iis 5.3.6 [Approved] - Possibly broken
+seek-dsc-webadministration 1.0.10 [Approved]
+wincdemu 4.1.0.20171221 [Approved]
+winflexbison 2.4.9.20170215 [Approved] Downloads cached for licensed users
+seek-dsc-nservicebus 1.0.10 [Approved]
+mpv.install 2017.12.25 [Approved] Downloads cached for licensed users
+cake.portable 0.28.0 [Approved]
+ag 2.1.0.1 [Approved] Downloads cached for licensed users
+patch-my-pc 4.0.1.5 [Approved] Downloads cached for licensed users
+VisualStudio2013Ultimate 12.0.40629.20150920 [Approved] - Possibly broken
+ruby.devkit 4.5.2.20120101 [Approved] - Possibly broken
+stylecop 4.7.55.0 [Approved]
+bleachbit 2.0 [Approved]
+buildmaster.agent.tcp 5.3.6 [Approved] - Possibly broken
+plantuml 1.2018.6.20180526 [Approved]
+screenpresso 1.7.2.1 [Approved] Downloads cached for licensed users
+HeidiSQL 9.5.0.5196 [Approved] Downloads cached for licensed users
+SQL2014.SMO 12.0.2000.8
+lightshot 5.4.0.36 [Approved]
+icinga2 2.8.4 [Approved] Downloads cached for licensed users
+protoc 3.5.1 [Approved] Downloads cached for licensed users
+hwmonitor 1.35 [Approved] Downloads cached for licensed users
+psexec 2.20 [Approved] Downloads cached for licensed users
+mousewithoutborders 2.1.8.105 [Approved] Downloads cached for licensed users
+musicbee 3.1.6590 [Approved] Downloads cached for licensed users
+LinkShellExtension 3.8.6.90 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+seek-dsc-software 1.0.10 [Approved]
+sqlite.shell 3.10.1 [Approved] Downloads cached for licensed users
+sqlserver-odbcdriver 13.1.4413.46 [Approved] Downloads cached for licensed users
+resharper-clt 2018.1.2 [Approved]
+newrelicserver 3.2.6.0
+trid 2.24.20180608 [Approved]
+bzr 2.5.1.2
+vmwareworkstation 14.1.2 [Approved] Downloads cached for licensed users
+nginx 1.12.2 [Approved] Downloads cached for licensed users
+seek-dsc-networking 1.0.10 [Approved]
+OpenCV 3.4.1 [Approved] Downloads cached for licensed users
+VisualStudio2013Professional 12.0.40629.20150920 [Approved]
+synctrayzor 1.1.21 [Approved] Downloads cached for licensed users
+RoyalTS 4.2.61424.10000 [Approved] Downloads cached for licensed users
+seek-dsc-harddisk 1.0.10 [Approved]
+Boxstarter.TestRunner 2.10.3 [Approved] - Possibly broken
+ack 2.22 [Approved]
+goggalaxy 1.2.32.20 [Approved] Downloads cached for licensed users
+hydrus-network 310.0 [Approved]
+SQL2012.ClrTypes 2011.110.3000.1 [Approved] Downloads cached for licensed users
+avidemux 2.7.1 [Approved]
+plexmediaserver 1.13.2.5142 [Approved]
+autohotkey_l.portable 1.1.14.20140119 [Approved]
+MicrosoftWSE 3.0 - Possibly broken
+dotMemory 2018.1.2 [Approved]
+vswhere 2.4.1 [Approved]
+spacesniffer 1.3.0.2 [Approved] Downloads cached for licensed users
+neo4j-community 3.4.0 [Approved]
+githubforwindows 2.13.0.2 [Approved] - Possibly broken
+bulk-crap-uninstaller 4.4 [Approved]
+VisualStudio2015Enterprise 2015.03.03 [Approved]
+soapui 5.4.0 [Approved] Downloads cached for licensed users
+rdpwrapper 1.6.2 [Approved] Downloads cached for licensed users
+SQL2012.SQLDom 11.1.2825.1 - Possibly broken
+libreoffice-still 5.4.7 [Approved] Downloads cached for licensed users
+neko 2.2.0 [Approved] - Possibly broken
+screentogif 2.13.3 [Approved] Downloads cached for licensed users
+windows-sdk-8.0 8.59.29750.0 [Approved]
+logparser 2.2.0.1 [Approved]
+sumologic 1.0 - Possibly broken
+seek-dsc-topshelf 1.0.10 [Approved]
+hashcheck 2.4.0 [Approved] Downloads cached for licensed users
+adobedigitaleditions 4.5.7 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+Yeoman 1.1.2.20170217 [Approved]
+obs-studio 21.1 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+daemontoolslite 4.49.1.20140507 - Possibly broken
+glogg 1.1.4 [Approved] Downloads cached for licensed users
+debugdiagnostic 2.1.0.7 [Approved] - Possibly broken
+rust 1.26.1 [Approved] Downloads cached for licensed users
+Far-3 3.0.4700 [Approved]
+redis 2.4.6.1 [Approved] - Possibly broken
+rdmfree 4.6.0.0 [Approved] Downloads cached for licensed users
+netbalancer 9.5.2 [Approved] - Possibly broken
+agentransack 8.0.867.0 [Approved] Downloads cached for licensed users
+DellCommandUpdate 2.3.1 [Approved] Downloads cached for licensed users
+flyway.commandline 4.2.0 [Approved] Downloads cached for licensed users
+anyvideoconverter 6.0.0 [Approved] - Possibly broken
+mumble 1.2.19 [Approved] Downloads cached for licensed users
+VisualStudio2017Professional 15.7.3.0 [Approved]
+truecrypt 7.1.20150620 [Approved] Downloads cached for licensed users
+sandboxie.install 5.24 [Approved] Downloads cached for licensed users
+FiraCode 1.205 [Approved] Downloads cached for licensed users
+CrashPlan 4.8.3 [Approved] Downloads cached for licensed users
+phpstorm 2018.1.5 [Approved] Downloads cached for licensed users
+nircmd 2.81.0.20171108 [Approved]
+spybot 2.4.40.20160327 [Approved] Downloads cached for licensed users
+windows-sdk-10.0 10.0.26624 [Approved] Downloads cached for licensed users
+MSXML6.SP1 6.10.1129.0 [Approved]
+Xming 6.9.0.31 [Approved]
+dex2jar 2.0 [Approved] Downloads cached for licensed users
+freemind 1.0.1 - Possibly broken
+GnuWin 0.6.3.1 - Possibly broken
+ddu 17.0.8.4 [Approved]
+potplayer 1.7.5545 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+KB2882822 1.0.1 [Approved]
+angryip 3.5.2 [Approved] Downloads cached for licensed users
+ruby1.9 1.9.3.54500
+nodist 0.8.8 [Approved]
+nsis.portable 3.03 [Approved] Downloads cached for licensed users
+FreeDownloadManager 3.9.5.1533 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+expresso 3.0.4750 [Approved] - Possibly broken
+bluescreenview 1.55 [Approved]
+Handle 4.11 [Approved] Downloads cached for licensed users
+toolsroot 0.1.0
+0install.install 2.10.0 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+SuperBenchmarker 4.5.1 [Approved]
+syncthing-gtk 0.9.2.7 [Approved] Downloads cached for licensed users
+sketchup 2016.1.1449.20170912 [Approved]
+waterfox 56.2.0 [Approved]
+desktopok 5.27 [Approved] Downloads cached for licensed users
+babun 1.2.0.20180102 [Approved]
+ReSharperCpp 2017.3.5 [Approved]
+rawcap 0.1.5.0 [Approved] Downloads cached for licensed users
+yasm 1.2.0
+ARMClient 1.2.0 [Approved]
+gnucash 3.1 [Approved]
+seek-dsc-database 1.0.10 [Approved]
+google-backup-and-sync 3.42.9747.1898 [Approved] Downloads cached for licensed users
+maxthon.commandline 5.1.5.3000 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+digiKam 5.9.0 [Approved] Downloads cached for licensed users
+streamlink 0.13.0 [Approved] Downloads cached for licensed users
+groovy 2.5.0 [Approved] Downloads cached for licensed users
+ChocolateyExplorer 0.2.2.111 [Approved] - Possibly broken
+jdownloader 2.0 [Approved] Downloads cached for licensed users
+VisualCppBuildTools 14.0.25420.1 [Approved]
+SharePoint.HiveShortcut.Explorer 1.0.0.0 - Possibly broken
+ultradefrag 7.0.2 [Approved]
+gsyncit 3.8.148 [Approved] - Possibly broken
+TeamCityAddin 2017.3.5 [Approved]
+clipgrab 3.6.8 [Approved]
+Dogtail.DotNet3.5SP1 11.2.13230.2
+duck 6.6.1.28146 [Approved] Downloads cached for licensed users
+pickles 2.18.2 [Approved]
+Devbox-Common.extension 1.0.1
+unrar 5.30 [Approved] Downloads cached for licensed users
+pgadmin4 3.0 [Approved] Downloads cached for licensed users
+ditto.install 3.21.223.0 [Approved]
+python.pypy 5.9 [Approved] Downloads cached for licensed users
+git.portable 2.17.1.2 [Approved]
+crystaldiskmark 5.2.0 [Approved] Downloads cached for licensed users
+anydvd 8.2.5.0 [Approved] Downloads cached for licensed users
+bleachbit.install 2.0 [Approved]
+RapidEE 9.1.936.20170923 [Approved]
+universal-usb-installer 1.9.8.100 [Approved]
+sharpkeys 3.5.0.20180307 [Approved] Downloads cached for licensed users
+hexchat 2.14.1 [Approved] Downloads cached for licensed users
+autohotkey_l 1.1.14.20140119
+reportviewer2008 9.1.30729.4402 [Approved] - Possibly broken
+synergy 1.7.5 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+freeSSHD 1.3.1 [Approved] Downloads cached for licensed users
+maxthon 4.9.4.1000 [Approved] - Possibly broken
+ganttproject 2.6.5.1638 - Possibly broken
+k-litecodecpackbasic 14.1.5 [Approved] Downloads cached for licensed users
+picklesui 2.18.2 [Approved]
+Lein 2.8.1 [Approved]
+battle.net 0.3
+freecad 0.17.13522.20180515 [Approved] Downloads cached for licensed users
+brave 0.22.808 [Approved] Downloads cached for licensed users
+SQL2012.CmdLine 11.0.2270.0 - Possibly broken
+rukerneltool 0.6.4.36 [Approved] - Possibly broken
+scribus 1.4.7 [Approved] Downloads cached for licensed users
+SmartGit 17.1.3 [Approved] - Possibly broken
+which 1.11 [Approved]
+CrashPlanPRO 4.6.0 [Approved] Downloads cached for licensed users
+diffmerge 4.2.0.20170602 [Approved] Downloads cached for licensed users
+zoom 4.1.25010.0522 [Approved] Downloads cached for licensed users
+cppcheck 1.82.0 [Approved] Downloads cached for licensed users
+dumo 2.15.2.76 [Approved] Downloads cached for licensed users
+0install.portable 2.10.0 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+GitReleaseNotes.Portable 0.7.1 [Approved]
+advanced-codecs 10.1.5 [Approved]
+praat 6.0.40 [Approved] Downloads cached for licensed users
+vmware-tools 10.2.5.8068406 [Approved] Downloads cached for licensed users
+mediamonkey 4.1.20.1864 [Approved] Downloads cached for licensed users
+qbs 1.11.1 [Approved] Downloads cached for licensed users
+vcxsrv 1.20.0.0 [Approved]
+avirafreeantivirus 14.0.6.552 - Possibly broken
+SQL2012.SMO 11.0.2100.61 [Approved] Downloads cached for licensed users
+sqlitebrowser 3.10.1 [Approved] Downloads cached for licensed users
+clamwin 0.99.1 [Approved] Downloads cached for licensed users
+PyWin32 219.0
+zip 3.0 [Approved] Downloads cached for licensed users
+Devbox-Common 1.0.2
+qdir 7.06 [Approved] Downloads cached for licensed users
+powershell-packagemanagement 10.0.10586.200 [Approved] Downloads cached for licensed users
+gitreleasemanager.portable 0.7.1 [Approved]
+msiafterburner 4.5.0 [Approved] Downloads cached for licensed users
+streamlink-twitch-gui 1.5.0 [Approved] Downloads cached for licensed users
+gtksharp 2.12.45 [Approved] Downloads cached for licensed users
+dukto 6.0 [Approved] - Possibly broken
+markdown-edit 1.33 [Approved] Downloads cached for licensed users
+haxe 3.4.7 [Approved]
+livestreamer-twitch-gui 1.0.0 [Approved]
+stellarium 0.18.0 [Approved]
+visualfsharptools 4.0 [Approved] Downloads cached for licensed users
+jackett 0.8.1070 [Approved]
+glasswire 1.2.100 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+mpv.portable 2017.12.25 [Approved] Downloads cached for licensed users
+roundhouse 0.9.1 [Approved]
+Mahou 2.7.0.0 [Approved] Downloads cached for licensed users
+chocolatey.server 0.2.4 [Approved]
+win32diskimager.install 1.0.0 [Approved] Downloads cached for licensed users
+Dogtail.AzureSDK 11.2.13230.2 - Possibly broken
+SwissFileKnife 1.8.9.0 [Approved] Downloads cached for licensed users
+bitvise-ssh-client 7.42 [Approved] Downloads cached for licensed users
+microsoft-message-analyzer 1.4.1.20161119 [Approved] Downloads cached for licensed users
+gtk-runtime 2.24.10.20121010 [Approved]
+MsSqlServer2012Express 11.00.3000.20140928 [Approved] - Possibly broken
+winobjc-tools 0.2.180220 [Approved]
+kcleaner 3.4.0.94 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+sandboxie 5.24 [Approved]
+githublink 2.3.0 [Approved]
+pkgconfiglite 0.28
+apache-httpd 2.4.33.20180409 [Approved]
+autodesk-fusion360 2.0.4126 [Approved] Downloads cached for licensed users
+NugetPackageManager 2.8.60318.667 [Approved]
+bluescreenview.install 1.55 [Approved] Downloads cached for licensed users
+emet 5.52 [Approved] Downloads cached for licensed users
+fxcop 10.0.30319.20180212 [Approved] Downloads cached for licensed users
+spystudio 2.9.2.20161106 [Approved] Downloads cached for licensed users
+vmwareplayer 7.0.0.20161122 [Approved]
+logstash 6.2.4 [Approved] Downloads cached for licensed users
+visualstudio2017-workload-netweb 1.2.0 [Approved]
+uplay 60.0.5678.0 [Approved] Downloads cached for licensed users
+xnviewmp.install 0.90 [Approved] Downloads cached for licensed users
+nasm 2.13.03 [Approved] Downloads cached for licensed users
+OfficeProPlus2013 15.0.4827 [Approved] Downloads cached for licensed users
+docker-toolbox 18.03.0 [Approved] Downloads cached for licensed users
+maxthon.install 4.9.4.1000 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+jom 1.1.2 [Approved] Downloads cached for licensed users
+GeekUninstaller 1.4.5.126 [Approved] Downloads cached for licensed users
+unetbootin 6.5.5 [Approved]
+telegram.portable 1.2.15 [Approved] Downloads cached for licensed users
+msdeploy 2.10.1
+nvidia-display-driver 398.11 [Approved] Downloads cached for licensed users
+reportviewer2010sp1 10.1.40219.329 [Approved] Downloads cached for licensed users
+sqlite.analyzer 3.10.1 [Approved] Downloads cached for licensed users
+NetBeans 8.2.20171030 [Approved]
+pyhoca-gui 0.5.0.4001 [Approved]
+ripgrep 0.8.1 [Approved] Downloads cached for licensed users
+andy 0.46.2.25 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+musescore 2.2.1 [Approved] Downloads cached for licensed users
+msbuild.communitytasks 1.5.0.235 [Approved] Downloads cached for licensed users
+discord.install 0.0.301 [Approved] Downloads cached for licensed users
+jitsi 2.10.5550.20180405 [Approved]
+lyx 2.2.3.2 [Approved] Downloads cached for licensed users
+miranda 0.10.70 [Approved] Downloads cached for licensed users
+vnc-viewer 6.17.1113 [Approved] Downloads cached for licensed users
+InfraRecorder 0.53.0.1
+geany 1.33 [Approved] Downloads cached for licensed users
+networkmonitor 3.4.0.20140224
+python3-x86_32 3.5.2.20170425 [Approved] - Possibly broken
+etcher 1.4.4 [Approved] Downloads cached for licensed users
+texniccenter 2.02 [Approved]
+mariadb 10.2.14 [Approved]
+drmemory.install 1.11.0 [Approved] Downloads cached for licensed users
+xbmc 13.2.0.20160121 [Approved]
+ext2fsd 0.69.0.20171118 [Approved]
+papercut 5.1.44 [Approved]
+dmd 2.073.0 [Approved] Downloads cached for licensed users
+logitechgaming 8.98.218 [Approved] Downloads cached for licensed users
+graphicsmagick 1.3.28 [Approved] Downloads cached for licensed users
+hashmyfiles 2.25 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+sqlyog 12.09 [Approved] Downloads cached for licensed users
+reaper 5.80 [Approved] Downloads cached for licensed users
+electrum 3.1.2 [Approved]
+Chutzpah 4.3.6 [Approved] Downloads cached for licensed users
+bowpad 2.3.8 [Approved] Downloads cached for licensed users
+visualstudio2017-remotetools 15.0.26430.2 [Approved]
+speedfan 4.52 [Approved]
+spf13-vim 3.0.3 [Approved]
+telnet 0.9.0 [Approved]
+ABC-Update 2.1.3 [Approved] Downloads cached for licensed users
+mkdocs-material 2.7.3 [Approved]
+onedrive 17.3.6798.0207 [Approved]
+https-everywhere-chrome 2016.12.19 [Approved]
+terminals 4.0.1 [Approved] Downloads cached for licensed users
+sass 1.3.1 [Approved]
+vim-tux.portable 8.1.0034 [Approved]
+picard 1.4.2 [Approved]
+puppet-agent.portable 1.10.4 [Approved] Downloads cached for licensed users
+copyq 3.4.0 [Approved]
+jruby 9.1.2.0 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+winflector 3.9.6.0 [Approved] Downloads cached for licensed users
+httrack.app 3.49.2 [Approved] Downloads cached for licensed users
+choco-upgrade-all-at-startup 2018.01.30 [Approved]
+electrum.install 3.1.2 [Approved] Downloads cached for licensed users
+prey 1.7.5 [Approved] Downloads cached for licensed users
+SkypeForBusiness 16.0.8229.2086 [Approved] Downloads cached for licensed users
+GPMDP 4.5.0 [Approved] Downloads cached for licensed users
+subtitleedit 3.5.6 [Approved] Downloads cached for licensed users
+visualstudio2017-workload-webbuildtools 1.3.0 [Approved]
+fusioninventory-agent 2.4 [Approved]
+mattermost-desktop 4.1.2 [Approved]
+rktools.2003 5.2.121102 [Approved]
+emacs64 25.3.1 [Approved] Downloads cached for licensed users
+SqlToolbelt 2.1.2.2457 [Approved]
+wincommandpaste 1.1.0.20150826 [Approved] Downloads cached for licensed users
+typescript 2.9.1 [Approved]
+dbmigration 8.7.6733 [Approved] Downloads cached for licensed users
+adobe-creative-cloud 1.0 [Approved]
+metricbeat 6.2.4 [Approved] Downloads cached for licensed users
+ImDisk-Toolkit 17.07.06 [Approved] Downloads cached for licensed users
+WestwindWebSurge 1.9.1 [Approved] Downloads cached for licensed users
+SublimeText3.PowershellAlias 0.1.0
+tailblazer 0.9.0.536 [Approved] Downloads cached for licensed users
+freecommander 2009.2.2.1
+httrack 3.49.2 [Approved]
+jmeter 4.0 [Approved] Downloads cached for licensed users
+drmemory 1.11.0 [Approved]
+bluegriffon 3.0.1 [Approved]
+scala 2.11.4 [Approved]
+stunnel 5.44 [Approved] Downloads cached for licensed users
+passwordSafe 3.44.0 [Approved] - Possibly broken
+AnkhSvn 2.5.12703 [Approved] Downloads cached for licensed users
+vim-x64 7.4.1824 [Approved]
+alldup 4.1.5 [Approved] Downloads cached for licensed users
+softerraldapbrowser 4.5.13724.20171215 [Approved] Downloads cached for licensed users
+transmission-qt 2.84.9.20170506 [Approved]
+coretemp 1.12.1 [Approved] Downloads cached for licensed users
+Pycharm 2018.1.3 [Approved] Downloads cached for licensed users
+cloudstation 4.2.5.4396 [Approved] Downloads cached for licensed users
+JabRef 4.3.1 [Approved] Downloads cached for licensed users
+visualstudio2015testagents 14.0.25420.1 [Approved] Downloads cached for licensed users
+autoit.install 3.3.14.5 [Approved]
+OpenHardwareMonitor 0.8.0 [Approved] Downloads cached for licensed users
+WindowsAzureLibsForNet 2.9 [Approved]
+nextcloud-client 2.3.3.1 [Approved] Downloads cached for licensed users
+clementine 1.3.1.20170212 [Approved]
+keepassx 2.0.3 [Approved]
+fake 5.0.0 [Approved]
+PartitionMasterFree 12.9 [Approved] Downloads cached for licensed users
+win32diskimager 1.0.0 [Approved]
+appfabric.caching 1.1 [Approved]
+srwareiron.install 66.0.3450.000 [Approved] Downloads cached for licensed users
+warmup 0.6.5.1 [Approved]
+hackfont 3.003 [Approved]
+atubecatcher 3.8.9432 [Approved] Downloads cached for licensed users
+line 3.8.0.1350 [Approved] - Possibly broken
+vsts-sync-migrator 7.5.36 [Approved] Downloads cached for licensed users
+mls-software-openssh 7.7.1.1 [Approved] Downloads cached for licensed users
+msbuild.extensionpack 4.0.13.0 [Approved] Downloads cached for licensed users
+ServiceBusExplorer 4.0.109 [Approved]
+burp-suite-free-edition 1.7.33 [Approved] Downloads cached for licensed users
+WAWSDeploy 1.8.0 [Approved]
+windows-sdk-10.1 10.1.15063.468 [Approved] Downloads cached for licensed users
+shutup10 1.6.1396 [Approved]
+visualstudio2017testagent 15.7.3.0 [Approved]
+vs2015remotetools 14.0.25424.0 [Approved] Downloads cached for licensed users
+windjview 2.1 [Approved] Downloads cached for licensed users
+powershell-core 6.0.2 [Approved] Downloads cached for licensed users
+selenium-edge-driver 6.17134 [Approved] Downloads cached for licensed users
+obs 0.659 [Approved] Downloads cached for licensed users
+XnViewMP 0.90 [Approved]
+winmerge-jp 2.14.0.77 [Approved] - Possibly broken
+dropkick 0.4.13.0 [Approved]
+cpu-z.portable 1.85.0.20180506 [Approved] Downloads cached for licensed users
+sweet-home-3d 5.7 [Approved]
+selenium-all-drivers 4.0 [Approved]
+Growl 2.0.9.20130406 [Approved] - Possibly broken
+keepassxc 2.3.3 [Approved] Downloads cached for licensed users
+kicad 4.0.7 [Approved] Downloads cached for licensed users
+logmein-rescue-console-desktop 7.8 [Approved] Downloads cached for licensed users
+zoomit 4.50.0.20160210 [Approved] Downloads cached for licensed users
+drivergenius 18.0.0.160 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+WinBOLT 3.2 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+vidcoder 2.62 [Approved] Downloads cached for licensed users
+scite4autohotkey 3.0.06.20170428 [Approved]
+librecad 2.1.3 [Approved] Downloads cached for licensed users
+btsync 2.3.6.20170529 [Approved]
+gnuwin32-coreutils.install 5.3.0 [Approved] Downloads cached for licensed users
+snaketail 1.9.4 [Approved]
+selenium-opera-driver 2.36 [Approved] Downloads cached for licensed users
+anki 2.0.52 [Approved] Downloads cached for licensed users
+procdump 9.00 [Approved] Downloads cached for licensed users
+mrviewer 4.1.6.20180603 [Approved] Downloads cached for licensed users
+FastCopy 3.41 [Approved]
+visualstudio2017-workload-manageddesktop 1.2.0 [Approved]
+markdownpad2 2.3 - Possibly broken
+visualstudio2017-workload-netcoretools 1.2.0 [Approved]
+XUnit 2.3.1 [Approved]
+jwtdecode 1.0.1 [Approved]
+mpc-be 1.5.1.171106 [Approved] Downloads cached for licensed users
+nettime 3.14.20161102 [Approved] Downloads cached for licensed users
+keepass-langfiles 2.33 [Approved]
+aspnetmvc 3.0.0.2 [Approved]
+maxima 5.41.0 [Approved] Downloads cached for licensed users
+netfx-4.7-devpack 4.7.2053.0 [Approved] Downloads cached for licensed users
+VS2010.ShellIntegratedRedist 10.0.30319.2 [Approved] - Possibly broken
+kis 19.0.0.0 [Approved]
+baregrep 3.50.0.20120225 [Approved]
+invantive-data-hub 17.20.0 [Approved] Downloads cached for licensed users
+viber 6.0.5.1518 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+ilmerge 2.12.0803 [Approved]
+GoogleChrome.Canary 28.0.1461.0 [Approved]
+EthanBrown.ConEmuConfig 0.0.5 [Approved]
+lame 3.100.20180304 [Approved] Downloads cached for licensed users
+bulkrenameutility.install 3.0.0.1 [Approved] Downloads cached for licensed users
+inspec 2.1.43 [Approved] Downloads cached for licensed users
+tixati 2.57 [Approved]
+kopano-deskapp-nightly 1.9.5 [Approved]
+autohotkey_l.install 1.1.14.20140119
+SourceLink 1.1.0 [Approved]
+QTTabBar 1038.0 [Approved] Downloads cached for licensed users
+winbox 3.12 [Approved] Downloads cached for licensed users
+ossec-agent 2.8 [Approved] - Possibly broken
+dia 0.97.2.2
+Listary 5.00.2843 [Approved] Downloads cached for licensed users
+databasenetpro 25.0.6733 [Approved] Downloads cached for licensed users
+cloudfoundry-cli 6.37.0 [Approved] Downloads cached for licensed users
+010editor.install 8.0.1 [Approved] Downloads cached for licensed users
+scansnapmanager 6.5.40 [Approved] Downloads cached for licensed users
+SqlServer2012Express 1.0.1 - Possibly broken
+sundance 4.5.0.2 - Possibly broken
+lenovo-thinkvantage-system-update 5.07.0072 [Approved] Downloads cached for licensed users
+finalbuilder 8.0.0.2412 [Approved] Downloads cached for licensed users
+ChromeDriver2 2.25 [Approved] Downloads cached for licensed users
+mingw-get 1.0.2 - Possibly broken
+logparser.lizardgui 6.7 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+vim-x64.install 7.4.1824 [Approved]
+Office365HomePremium 2016.20160728 [Approved] Downloads cached for licensed users
+geforce-game-ready-driver-win10 378.92 [Approved] - Possibly broken
+alanstevens.utils 1.17
+Lua 5.1.4.5000 [Approved] Downloads cached for licensed users
+Influx-Capacitor 1.0.89 [Approved]
+snagit 18.1.0 [Approved]
+EMDB 3.15 [Approved] Downloads cached for licensed users
+wox 1.3.524 [Approved] Downloads cached for licensed users
+invantive-query-tool 17.20.0 [Approved] Downloads cached for licensed users
+KickAssVim 7.4.0.00 - Possibly broken
+spatial 1.1.9 [Approved]
+cameyo 3.1.1446 [Approved] Downloads cached for licensed users
+iperf3 3.1.3 [Approved] Downloads cached for licensed users
+hpusbdisk 2.2.3.20150303 [Approved]
+wkhtmltopdf 0.12.4.20170325 [Approved]
+gitlab-runner 10.8.0 [Approved]
+RoboMongo 0.8.4.20140317 - Possibly broken
+arduinoide 1.6.1 [Approved]
+devcon.portable 10.0.10586.23 [Approved]
+trillian 6.0.0.61 [Approved] Downloads cached for licensed users
+mmbot 0.9.8.8 [Approved]
+stexbar 1.9.1 [Approved] Downloads cached for licensed users
+vmware-workstation-player 12.5.4 [Approved] Downloads cached for licensed users
+smartmontools 6.6.1 [Approved] Downloads cached for licensed users
+newt 1.0.0.1 - Possibly broken
+Logmein.Client 4.1.0.32682
+VisualStudio2012Professional 11.0.1.20151219 [Approved] Downloads cached for licensed users
+Dogtail.DevEnv 11.2.13214.1 - Possibly broken
+displayFusion 9.2.2 [Approved]
+duplicatefilefinder 7.0.7.0 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+eid-belgium 4.1.20 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+console-devel 2.00.148
+miniconda3 4.5.4 [Approved]
+winsshterm 2.2.6 [Approved] Downloads cached for licensed users
+sonarcube-scanner 3.0.3.778 [Approved] Downloads cached for licensed users
+avginternetsecurity 15.0.6125 [Approved] - Possibly broken
+mc 4.8.19.204 [Approved] Downloads cached for licensed users
+ruby.portable 2.3.0 [Approved] Downloads cached for licensed users
+GSView 6.0.0.20150422 [Approved] Downloads cached for licensed users
+netfx-4.6-devpack 4.6.81 [Approved] - Possibly broken
+autologon 3.10 [Approved] Downloads cached for licensed users
+imageglass 4.5.11.27 [Approved]
+gnuplot 5.0.5 [Approved] Downloads cached for licensed users
+ssdt15 14.0.61712.20180510 [Approved]
+notepad3.install 4.18.512.992 [Approved]
+qutebrowser.install 1.3.1 [Approved] Downloads cached for licensed users
+mssqlserver2014-sqllocaldb 12.0.5000.0 [Approved] Downloads cached for licensed users
+fciv 1.0.0.20150904 [Approved] Downloads cached for licensed users
+lavfilters 0.71 [Approved] Downloads cached for licensed users
+doPDF 7.3.400 [Approved] - Possibly broken
+sandcastle 2018.5.14.0 [Approved]
+duplicati 2.0.3.3 [Approved] Downloads cached for licensed users
+oldcalc 1.1.171010 [Approved] Downloads cached for licensed users
+ProduKey 1.92 [Approved]
+XSockets.Windows.Service 4.0.0
+tagscanner 6.0.28.20180503 [Approved]
+orwelldevcpp 5.11 [Approved] Downloads cached for licensed users
+gnatsd 1.0.2.20170727 [Approved] Downloads cached for licensed users
+gauge 0.9.9 [Approved] Downloads cached for licensed users
+XmlNotepad 2007.0.0.0
+Powerpoint.Viewer 12.0.6219.1000
+visualstudio2017-workload-azure 1.2.0 [Approved]
+bonjour 2.0.2.0 [Approved] Downloads cached for licensed users
+wim2vhd 6.1.7600.3 [Approved]
+docker-kitematic 0.17.3 [Approved]
+naps2 5.8.1 [Approved]
+scala.portable 2.11.4 [Approved]
+airdroid 3.6.3.0 [Approved] Downloads cached for licensed users
+FreePlane 1.6.15 [Approved] Downloads cached for licensed users
+softwareinformer 1.5.1321 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+monodevelop 5.10.1.6 [Approved] Downloads cached for licensed users
+VCExpress2010 0.1.0.20140915
+octave.portable 4.4.0 [Approved] Downloads cached for licensed users
+prefix 2.5.19 [Approved] Downloads cached for licensed users
+VisualStudioExpress2013WindowsDesktop 12.0.21005.1
+reshack 5.0.42 [Approved]
+qutebrowser 1.3.1 [Approved]
+SABnzbd 2.3.4 [Approved]
+toad.mysql 6.3.0.642 [Approved] - Possibly broken
+Dogtail.VisualStudioToolsforGit 11.2.13230.2 - Possibly broken
+redis-desktop-manager 0.8.0.3840 [Approved] Downloads cached for licensed users
+OpenShot 2.4.1 [Approved] Downloads cached for licensed users
+ums 6.6.0 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+syncthing 0.14.48 [Approved] Downloads cached for licensed users
+ldc 1.9.0 [Approved] Downloads cached for licensed users
+github-desktop 1.2.2 [Approved] Downloads cached for licensed users
+perfview 1.9.0 [Approved] Downloads cached for licensed users
+Dogtail.VS2012.1 11.2.13230.2
+sdelete 2.01 [Approved] Downloads cached for licensed users
+sidesync 4.7.5.203 [Approved] Downloads cached for licensed users
+winflexbison3 2.5.10.20170725 [Approved] Downloads cached for licensed users
+jetty 9.3.9.20160517 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+minecraft 1.9 [Approved] Downloads cached for licensed users
+electrum.portable 3.1.1 [Approved] Downloads cached for licensed users
+keepass-classic 1.35 [Approved]
+logexpert 1.6.13 [Approved]
+au 2018.5.18 [Approved]
+iCloud 7.4.0 [Approved]
+aida64extreme 4.60.3100 - Possibly broken
+7-taskbar-tweaker 5.4 [Approved] Downloads cached for licensed users
+bulkrenameutility 3.0.0.1 [Approved]
+superputty 1.4.0.8 [Approved]
+syncback 7.6.36.0 [Approved] - Possibly broken
+MongoVUE 1.6.6
+cheatengine 6.7 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+Pencil 3.0.4 [Approved] Downloads cached for licensed users
+studio3t 2018.3.1 [Approved] Downloads cached for licensed users
+pspad 5.0.0.20180510 [Approved] Downloads cached for licensed users
+VS2013RemoteTools 12.0.31101.0 [Approved] Downloads cached for licensed users
+cemu 1.12.1 [Approved] Downloads cached for licensed users
+jetbrainstoolbox 1.8.3678 [Approved] Downloads cached for licensed users
+invokemsbuild 1.5.17 [Approved]
+Miniconda 4.3.21 [Approved] Downloads cached for licensed users
+poshdevops 0.0.72 [Approved]
+emsisoft-emergency-kit 2018.4.0.8670 [Approved] Downloads cached for licensed users
+inssider 3.1.2.13 [Approved]
+kubernetes-node 1.10.2 [Approved] Downloads cached for licensed users
+Posh-HG 1.1.0.20120528 [Approved] - Possibly broken
+CLOC 1.76 [Approved] Downloads cached for licensed users
+git-annex 6.20180227 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+fastcopy.portable 3.41 [Approved]
+advanced-renamer.install 3.82 [Approved]
+thebrain.install 9.000 [Approved] Downloads cached for licensed users
+Dogtail.VisualStudio2012Ultimate 11.2.13230.2
+bower 1.8.4 [Approved]
+rmprepusb 2.1.722 - Possibly broken
+AutoRest 1.0.0 [Approved]
+VS2013.4 1.0.0 [Approved] - Possibly broken
+ransomfree 2.4.2.0 [Approved] Downloads cached for licensed users
+ds4windows 1.4.120 [Approved] Downloads cached for licensed users
+honeyview.install 5.27 [Approved]
+mendeley 1.19 [Approved] Downloads cached for licensed users
+WinHttpCertCfg 1.0.0.0
+kitty.portable 0.67.0.0 [Approved]
+rambox 0.5.17 [Approved] Downloads cached for licensed users
+snaketail.install 1.9.4 [Approved] Downloads cached for licensed users
+twitch 7.5.6717.24902 [Approved] Downloads cached for licensed users
+hadouken 4.6.0 - Possibly broken
+vim-x64.portable 7.4.1824 [Approved]
+ncrunch-vs2015 3.17.2 [Approved] Downloads cached for licensed users
+EthanBrown.SublimeText2.WebPackages 0.3.0 - Possibly broken
+startisbackplus 1.6.2 - Possibly broken
+ie9 0.0.6 [Approved] Downloads cached for licensed users
+Outlookcaldav 3.2.0 [Approved]
+office365-2016-deployment-tool 16.0.7614.3602 [Approved] Downloads cached for licensed users
+httrack.tool 3.49.2 [Approved]
+0install 2.10.0 [Approved] - Possibly broken
+WindowsSystemControlCenter 3.4.0.2 [Approved] Downloads cached for licensed users
+io.js 3.0.0 [Approved] Downloads cached for licensed users
+ultraiso 9.7.1.3519 [Approved] Downloads cached for licensed users
+NimbleText 2.8.1.38449 [Approved] Downloads cached for licensed users
+ActiveTcl 8.6.4.1 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+thebrain 9.000 [Approved]
+eraser 6.2.0.2982 [Approved]
+LynxToolkit 2015.1.425 [Approved]
+leagueoflegends 1.0.0.20171207 [Approved] Downloads cached for licensed users
+IronScheme 0.9.111338 [Approved] - Possibly broken
+cmdermini.portable 1.1.4.102 [Approved]
+blat 3.2.17 [Approved] Downloads cached for licensed users
+kibana 6.2.4 [Approved]
+invantive-control-for-excel 17.20.0 [Approved] Downloads cached for licensed users
+projectlibre 1.5.9 [Approved] Downloads cached for licensed users
+intel-driver-update-utility 3.1.1.220180112 [Approved] - Possibly broken
+xrepo 1.0.0 [Approved]
+evince 2.32.0.145001 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+Less 5.29 [Approved]
+vault 0.10.0 [Approved] Downloads cached for licensed users
+produkey.install 1.92 [Approved] Downloads cached for licensed users
+queueexplorer-standard 3.3.1 [Approved]
+SQL2008.NativeClient 10.00.2531.00
+VisualStudio2013Premium 12.0.40629.20150920 [Approved] - Possibly broken
+pdf-ifilter-64 11.0.01 [Approved] - Possibly broken
+memcached 1.4.4 [Approved] - Possibly broken
+datagrip 2018.1.4 [Approved] Downloads cached for licensed users
+mozbackup 1.5.1.20141130 [Approved]
+QLCplus 4.10.4 [Approved] - Possibly broken
+fritzing 0.9.3 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+SQL2008.SMO 10.00.2531.01
+openra 2018.03.07 [Approved]
+freeciv 2.5.11 [Approved] Downloads cached for licensed users
+GoogleJapaneseInput 1.3.24.20141007
+livestreamer 1.12.2 [Approved] Downloads cached for licensed users
+MSVisualCplusplus2013-redist 1.1 [Approved]
+netscan 6.2.1.20161101 [Approved] - Possibly broken
+jivkok.dev1 1.1.0.8 - Possibly broken
+bluej 4.1.2 [Approved] Downloads cached for licensed users
+dexpot 1.6.13 - Possibly broken
+ToTypeScriptD 0.1.5081.42854
+ngrok.portable 2.0.1 [Approved]
+bitvise-ssh-server 7.39 [Approved]
+MultiCommander 8.1.0.2452 [Approved] Downloads cached for licensed users
+attributechanger 9.0.1 [Approved]
+opera-developer 34.0.1996.0 [Approved] Downloads cached for licensed users
+draftsight 2018.02 [Approved] Downloads cached for licensed users
+mediacoder 0.8.32 - Possibly broken
+FileFormatConverters 1.0.1
+dejavufonts 2.37 [Approved] Downloads cached for licensed users
+jivkok.tools 1.1.0.7 - Possibly broken
+altap-salamander 3.0.8 [Approved] Downloads cached for licensed users
+python.x86 3.4.1.20140609 [Approved] - Possibly broken
+LightTable 0.8.1 [Approved] Downloads cached for licensed users
+anaconda2 5.1.0 [Approved]
+disableuac 0.0.3 [Approved]
+songr 2.1.1 [Approved] Downloads cached for licensed users
+visioviewer 16.0 [Approved]
+SQL2008R2.ClrTypes 10.50.1600.1
+windowsessentials 16.4.3508.0209 - Possibly broken
+ares 2.4.3 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+WestwindHtmlHelpBuilder 5.8 [Approved] Downloads cached for licensed users
+time4popcorn 0.5.0 [Approved] - Possibly broken
+ie10 0.0.3
+clipx 1.0.3.20130221
+wamp-server 2.500 - Possibly broken
+ffdshow 1.3.4531.20140718
+bundlerminifier 2.8.391 [Approved] Downloads cached for licensed users
+keepass.portable 2.39.1 [Approved] Downloads cached for licensed users
+etcd 3.3.0 [Approved] Downloads cached for licensed users
+elasticsearch-service 1.4.1.20160203 [Approved]
+rocketchat 2.10.5 [Approved] Downloads cached for licensed users
+revouninstallerpro 3.1.1.20141201 [Approved]
+hub 2.2.9 [Approved] Downloads cached for licensed users
+mirc 7.52 [Approved] Downloads cached for licensed users
+jdk10 10.0.1 [Approved]
+setpoint 6.68.250 [Approved] Downloads cached for licensed users
+Secunia.PSI 3.0.0.9016
+systemninja 3.1.6 [Approved] - Possibly broken
+dosbox 0.74.0.0 - Possibly broken
+pvm 9.5.3.0 [Approved] Downloads cached for licensed users
+OwinHost 3.0.0
+SublimeText3.app 3.0.0.3065 [Approved] - Possibly broken
+aptana-studio 3.6.1.20161113 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+acmesharp-posh-all 0.8.1.0 [Approved] - Possibly broken
+highlight 3.43 [Approved] Downloads cached for licensed users
+racket 6.12 [Approved] Downloads cached for licensed users
+liquibase 3.6.1 [Approved] Downloads cached for licensed users
+tor 0.3.2.10 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+poedit 2.0.6 [Approved] Downloads cached for licensed users
+fzf 0.17.3 [Approved]
+nunit-console-runner 3.8.0 [Approved]
+lftp 4.8.0 [Approved] Downloads cached for licensed users
+drivesnapshot 1.46.18136 [Approved]
+MultiPar 1.2.9.9 [Approved]
+zeal.install 0.5.0.20180104 [Approved] Downloads cached for licensed users
+WindowsLiveInstaller 2012.0.0.20151215 [Approved]
+dell-update 2.1.3.0 [Approved] Downloads cached for licensed users
+Boxstarter.WindowsUpdate 1.1.0 [Approved] - Possibly broken
+MSAccess2010-redist-x86 1.2 [Approved]
+siw 8.2.2.20180502 [Approved] Downloads cached for licensed users
+concerteenv 1.2.0 - Possibly broken
+cdrtfe 1.5.8 [Approved]
+CloudBerryExplorer.AmazonS3 5.4.0.12 [Approved] Downloads cached for licensed users
+eac 1.3.0.20171025 [Approved] Downloads cached for licensed users
+quiterss 0.18.11 [Approved]
+pdftk 2.02
+jivkok.SublimeText3.Packages 1.0.0.12 - Possibly broken
+IntelliJIDEA 2018.1 [Approved]
+mactype 2013.1231.0 - Possibly broken
+linqpad5.AnyCPU.portable 5.26.01 [Approved] Downloads cached for licensed users
+teamviewer8 8.0.26038
+mediainfo-cli 18.03.1 [Approved] Downloads cached for licensed users
+SciLab 6.0.0 [Approved] Downloads cached for licensed users
+Cntlm 0.92.3.2 [Approved] Downloads cached for licensed users
+pretzel 0.7.1 [Approved] Downloads cached for licensed users
+tfpt 14.0.23206.1 [Approved] Downloads cached for licensed users
+SqlServer2014Express 1.0.1 - Possibly broken
+you-get 0.4.915 [Approved] Downloads cached for licensed users
+docker-machine-vmwareworkstation 1.1.0 [Approved] Downloads cached for licensed users
+MemProfiler 5.6.33 [Approved] Downloads cached for licensed users
+PowerPointViewer 1.0.1
+testdisk-photorec 7.0.0.20170429 [Approved]
+prime95 29.4 [Approved] Downloads cached for licensed users
+wudt 1.0.30.20180515 [Approved] Downloads cached for licensed users
+SQL2008.ClrTypes 10.00.2531.00
+Inconsolata 2014.12.31 [Approved]
+dispcalgui.install 3.5.2.0 [Approved] Downloads cached for licensed users
+puntoswitcher 4.4 [Approved] Downloads cached for licensed users
+EpsDevTools.Web 0.4.1 - Possibly broken
+lhaplus 1.59.3 - Possibly broken
+visualstudio2013testagents 12.0.21005.20160105 [Approved] Downloads cached for licensed users
+gnuwin32-sed.install 4.2.1 [Approved] Downloads cached for licensed users
+honeyview 5.27 [Approved]
+Erlang16 16.03.4
+scite 3.7.2 [Approved] - Possibly broken
+hitmanpro 104.96.3.31 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+reflection 4.5.1
+Tunnelier 6.47.0.20160703 [Approved]
+PhraseExpress 13.6.10 [Approved]
+wasp 2.5.0.1
+linqpad5.portable 5.26.01 [Approved] Downloads cached for licensed users
+autoload 4.1
+processhacker.portable 2.39 [Approved] Downloads cached for licensed users
+tv-browser 4.0.1 [Approved] Downloads cached for licensed users
+nginx-service 1.12.2 [Approved]
+unifying 2.50.25.20161009 [Approved] Downloads cached for licensed users
+winff 1.5.5 [Approved]
+rclone.portable 1.39 [Approved]
+geogebra6 6.0.363.00 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+md5 2.2 [Approved]
+treesizefree.portable 4.1.2.1 [Approved] Downloads cached for licensed users
+keepass-plugin-keeagent 0.8.1 [Approved]
+transmission 2.92 [Approved] Downloads cached for licensed users
+codelite 12.0 [Approved]
+sql2016-clrtypes 13.0.1601.5 [Approved]
+dokany 1.0.5 [Approved] Downloads cached for licensed users
+IEDriverServer 2.32.3 - Possibly broken
+logparserstudio 2.2
+ericzimmermantools 2.3.2.6 [Approved]
+KatMouse 1.7 - Possibly broken
+jing 2.8.13007 [Approved]
+bitcoin.install 0.16.0 [Approved] Downloads cached for licensed users
+gsmartcontrol 1.1.3 [Approved] Downloads cached for licensed users
+pik 0.3.0 [Approved]
+sysmon 7.01 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+easybcd 2.2.0.183 - Possibly broken
+em-client 7.1.31849 [Approved] Downloads cached for licensed users
+keepass-plugin-keepasshttp 1.8.4.2 [Approved] - Possibly broken
+boot2docker 1.6.2 [Approved] - Possibly broken
+RegShot 1.9.3 [Approved] Downloads cached for licensed users
+GoogleChrome.Dev 27.0.1453.12 [Approved]
+WordViewer 1.0.1 - Possibly broken
+signal 1.12.0 [Approved] Downloads cached for licensed users
+typescript-vs2017 2.9.1 [Approved] Downloads cached for licensed users
+dokan-library 0.6.0.20160211 [Approved]
+Devbox-RapidEE 0.0.0.20141226 [Approved] - Possibly broken
+unreal-commander 3.57.1297 [Approved] Downloads cached for licensed users
+securepointsslvpn 2.0.21 [Approved]
+kickassconsole 0.1.9
+winfsp 1.2.17346 [Approved]
+SQL2014-powershell 12.0.2000.8 [Approved] Downloads cached for licensed users
+velocity 1.1.13 [Approved] Downloads cached for licensed users
+markpad 1.0.5
+freevideoeditor 5.8.7 [Approved]
+hwinfo.portable 5.84 [Approved]
+SQL2012.PowerShell 11.0.2100.61
+golo 3.2.0 [Approved] Downloads cached for licensed users
+SharePointDesigner2010x32 14.0.4730.1010
+advanced-renamer 3.82 [Approved]
+bitcoin 0.16.0 [Approved]
+selenium 3.12.0 [Approved]
+choco-upgrade-all-at 0.0.5 [Approved]
+lastpass-for-applications 4.1.56 [Approved] Downloads cached for licensed users
+apktool 2.3.2 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+x2go 4.1.1.1 [Approved]
+kingsoft-office-free 9.1.0.20140820 - Possibly broken
+crystalreports-for-visualstudio 13.0.21.2533 [Approved] Downloads cached for licensed users
+SublimeText2.PackageControl 1.6.3 - Possibly broken
+smtp4dev 2.0.10 [Approved] Downloads cached for licensed users
+kellyelton.devenvironment 1.0.0.11 - Possibly broken
+handbrake.portable 1.1.0 [Approved]
+GitVersion 1.0.0.1
+snoop 2.8.0
+EthanBrown.SublimeText2.EditorPackages 0.2.2 - Possibly broken
+TaskCoach 1.4.2 [Approved] Downloads cached for licensed users
+dell-omsa 7.2.0.121620132
+rclone 1.39 [Approved]
+Grails 3.3.5 [Approved] Downloads cached for licensed users
+SkyDrive 16.4.20140630
+enpass.install 5.6.5 [Approved] Downloads cached for licensed users
+Python.Cheetah 2.4.4 - Possibly broken
+languagetool 4.1 [Approved] Downloads cached for licensed users
+micro 1.4.0 [Approved] Downloads cached for licensed users
+gnuwin32-grep.install 2.5.4 [Approved] Downloads cached for licensed users
+mssqlserver-compact3.5 3.5.5386.2 [Approved]
+boostnote 0.11.5 [Approved] Downloads cached for licensed users
+pragmaticworksworkbenchserver 2018.2.4.503 [Approved] Downloads cached for licensed users
+windows-10-update-assistant 1.4.9200.22452 [Approved]
+ipscan 2.5.3233 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+ShrewSoftVpn 2.2.2.0 - Possibly broken
+microsoft-r-open 3.4.4 [Approved] Downloads cached for licensed users
+keypirinha 2.18.2 [Approved] Downloads cached for licensed users
+corvusskk 2.6.1 [Approved]
+gulp-cli 2.0.1 [Approved]
+Prince 10.0 [Approved] Downloads cached for licensed users
+ultramon 3.4.0 [Approved] Downloads cached for licensed users
+TcpView 3.05
+WindowsLiveWriter 2012.0.0.20160129 [Approved] - Possibly broken
+xamarin-visualstudio 4.0.3.214 [Approved] Downloads cached for licensed users
+reportgenerator.portable 3.1.0.0 [Approved] Downloads cached for licensed users
+notepad3 4.18.512.992 [Approved]
+notepadreplacer 1.1.6 - Possibly broken
+allbrowsers 1.0 - Possibly broken
+qpmx 1.5.0 [Approved] Downloads cached for licensed users
+kdevelop 5.2.0 [Approved]
+wingrep 2.3 - Possibly broken
+dnspy 3.0.2.0 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+ironpython 2.7.8.1 [Approved]
+db-visualizer 10.0.10 [Approved] Downloads cached for licensed users
+DSC.PowerShellCommunity 1.175.1 - Possibly broken
+retroarch 1.7.2 [Approved] Downloads cached for licensed users
+pragmaticworksworkbench 2018.2.4.503 [Approved] Downloads cached for licensed users
+taskfactory 2018.2.4.503 [Approved] Downloads cached for licensed users
+dngrep 2.9.93.0 [Approved]
+carnac 2.2.155 [Approved] Downloads cached for licensed users
+toggl 7.3.318 [Approved] Downloads cached for licensed users
+resourcehacker.portable 4.6.32 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+rammap 1.50 [Approved] Downloads cached for licensed users
+elastic 1.5.1 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+nvika 1.0.1 [Approved] Downloads cached for licensed users
+romp 1.7.1 [Approved]
+freemake-video-converter 4.1.9.45 [Approved] Downloads cached for licensed users
+ActiveMQ 5.15.2.20171027 [Approved] Downloads cached for licensed users
+wunderlist 3.19.7 [Approved] Downloads cached for licensed users
+sonarr 2.0.0.5163 [Approved]
+hdtune 2.55.0.1 [Approved] Downloads cached for licensed users
+wnetwatcher 2.17 [Approved] - Possibly broken
+winsshd.install 6.47.0.20160526 [Approved]
+boxcryptor 2.29.799 [Approved] Downloads cached for licensed users
+wnetwatcher.install 2.17 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+jamovi.install 0.9.1.000 [Approved]
+transgui 5.15.4 [Approved] Downloads cached for licensed users
+realvnc 5.3.2 [Approved]
+freecommander-xe 2016.715 [Approved] - Possibly broken
+zona 2.0.1.5 [Approved] - Possibly broken
+cloneapp 2.02.182 [Approved] Downloads cached for licensed users
+lazarus 1.8.4 [Approved] Downloads cached for licensed users
+SpeedCrunch 0.12 [Approved] Downloads cached for licensed users
+SeleniumGridInABox.Node 1.9.1.6 [Approved]
+gnupg-modern 2.2.7 [Approved] Downloads cached for licensed users
+VisualStudio2012Ultimate 11.0.1 [Approved]
+wps-office-free 10.2.0.605100 [Approved] Downloads cached for licensed users
+hostsman 4.7.105.20180405 [Approved]
+italc 3.0.1 [Approved] Downloads cached for licensed users
+gajim 1.0.0.1 [Approved] Downloads cached for licensed users
+dspeech 1.67 [Approved] Downloads cached for licensed users - Possibly broken for FOSS users (due to original download location changes by vendor)
+balsamiqmockups.install 1.0.8 [Approved] - Possibly broken
+picotorrent 0.14.2 [Approved] Downloads cached for licensed users
+ssdt12 12.0.50512.0 [Approved] - Possibly broken
+choco-package-list-backup 2018.05.19 [Approved]
+Cura 15.04.6 [Approved]
+windowstelnet 1.0.0
+sgt-puzzles 2018.06.02 [Approved] Downloads cached for licensed users
+naps2.install 5.8.1 [Approved] Downloads cached for licensed users
+xmlstarlet.portable 1.6.1 [Approved]
+xmlstarlet 1.6.1 [Approved]
+setacl 3.0.6.0 [Approved] Downloads cached for licensed users
+torguard-client 3.85.0 [Approved] Downloads cached for licensed users
+VS2013.ShellIsolatedRedist 1.0.1
+typescript.vs 1.0.1 [Approved] - Possibly broken
+jamovi 0.9.1.000 [Approved]
+licecap 1.28 [Approved]
+kubernetes-helm 2.9.1 [Approved] Downloads cached for licensed users
+RegScanner 2.30 [Approved] - Possibly broken
+eventstore-oss 4.1.1.1 [Approved] Downloads cached for licensed users
+flightgear 2016.4.1 [Approved]
+phraseexpress.install 13.6.10 [Approved]
+aegisub 3.2.2.20161107 [Approved] Downloads cached for licensed users
+araxismerge 2018.4988 [Approved] Downloads cached for licensed users
+haroopad 0.13.1 [Approved] Downloads cached for licensed users
+usbdeview 2.75 [Approved] Downloads cached for licensed users
+SQL2008R2.SMO 10.50.1600.1
+visualstudio2017-workload-vctools 1.3.0 [Approved]
+drivermax 9.43.0.291 [Approved] Downloads cached for licensed users
+Jump-Location 0.6.0.20180509 [Approved]
+https-everywhere-firefox 5.2.15 [Approved]
+sonyvegaspro 13.0.428 [Approved] - Possibly broken
+mssql2014express-defaultinstance 12.0.2000.2016090800 [Approved] Downloads cached for licensed users
+Icaros 3.0.2 [Approved] Downloads cached for licensed users
+lili 2.9.4 [Approved]
+dotnetfx 4.7.2.0 [Approved]
+bud 0.5.2 [Approved] Downloads cached for licensed users
+ulsviewer 16.0.3129.1000
+1525 packages found.
