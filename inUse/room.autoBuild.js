@@ -19,7 +19,7 @@ let protectedStructures = [
 ];
 
 function roomBuilding() {
-    if (Game.constructionSites.length > 75) return;
+    if (Game.constructionSites.length > 0) return;
     for (let name in Game.spawns) {
         let spawn = Game.spawns[name];
         if (!spawn.room.memory.primarySpawn) {

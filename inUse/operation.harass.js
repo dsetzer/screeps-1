@@ -12,7 +12,7 @@ Creep.prototype.harassRoom = function () {
         highCommand.operationSustainability(this.room);
         let sentence = ['Area', 'Denial', 'In', 'Progress'];
         let word = Game.time % sentence.length;
-        this.say(sentence[word], true);
+        this.say(sentence[word], false);
         let hostile = this.findClosestEnemy();
         if (Memory.targetRooms[this.memory.targetRoom]) {
             if (hostile && hostile.body && (hostile.getActiveBodyparts(ATTACK) > 3 || hostile.getActiveBodyparts(RANGED_ATTACK) > 3)) {

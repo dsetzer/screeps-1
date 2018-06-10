@@ -10,7 +10,7 @@ const profiler = require('screeps-profiler');
  */
 function role(creep) {
     //INITIAL CHECKS
-    creep.say(ICONS.haul, true);
+    creep.say(ICONS.haul, false);
     if (creep.renewalCheck(5)) return null;
     if (creep.borderCheck()) return null;
     if (!creep.memory.remote && creep.wrongRoom()) return null;
@@ -199,7 +199,7 @@ function boostDelivery(creep) {
     }
     let terminal = creep.room.terminal;
     let storage = creep.room.storage;
-    creep.say(ICONS.boost, true);
+    creep.say(ICONS.boost, false);
     if (creep.carry[lab.memory.neededBoost] === _.sum(creep.carry)) {
         switch (creep.transfer(lab, lab.memory.neededBoost)) {
             case OK:
@@ -273,7 +273,7 @@ function nuclearEngineer(creep) {
     let ghodium = getResourceAmount(creep.room, RESOURCE_GHODIUM);
     if (nuker.ghodium < nuker.ghodiumCapacity && ghodium > 0) {
         if (_.sum(creep.carry) > creep.carry[RESOURCE_GHODIUM]) {
-            creep.say(ICONS.nuke, true);
+            creep.say(ICONS.nuke, false);
             for (let resourceType in creep.carry) {
                 switch (creep.transfer(storage, resourceType)) {
                     case OK:
@@ -286,7 +286,7 @@ function nuclearEngineer(creep) {
                 }
             }
         } else if (creep.carry[RESOURCE_GHODIUM] > 0) {
-            creep.say(ICONS.nuke, true);
+            creep.say(ICONS.nuke, false);
             switch (creep.transfer(nuker, RESOURCE_GHODIUM)) {
                 case OK:
                     delete creep.memory.nuclearEngineer;
@@ -297,7 +297,7 @@ function nuclearEngineer(creep) {
                     return true;
             }
         } else if (!creep.memory.itemStorage) {
-            creep.say(ICONS.nuke, true);
+            creep.say(ICONS.nuke, false);
             if (storage.store[RESOURCE_GHODIUM] > 0) {
                 creep.memory.nuclearEngineer = true;
                 creep.memory.itemStorage = storage.id;
@@ -309,7 +309,7 @@ function nuclearEngineer(creep) {
                 delete creep.memory.itemStorage;
             }
         } else if (creep.memory.itemStorage && creep.memory.nuclearEngineer) {
-            creep.say(ICONS.nuke, true);
+            creep.say(ICONS.nuke, false);
             let stockpile = Game.getObjectById(creep.memory.itemStorage);
             switch (creep.withdraw(stockpile, RESOURCE_GHODIUM)) {
                 case OK:

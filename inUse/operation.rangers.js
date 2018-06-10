@@ -4,7 +4,7 @@ Creep.prototype.rangersRoom = function () {
     if (!this.moveToStaging() || this.room.name === this.memory.targetRoom) {
         let sentence = ['Pew', 'Bang', 'Pop', 'Peeeeeew'];
         let word = Game.time % sentence.length;
-        this.say(sentence[word], true);
+        this.say(sentence[word], false);
         let squadLeader = _.filter(Game.creeps, (c) => c.memory && c.memory.targetRoom === this.memory.targetRoom && c.memory.squadLeader);
         if (!squadLeader.length) this.memory.squadLeader = true;
         if (this.memory.squadLeader) {
