@@ -115,7 +115,7 @@ Creep.prototype.healMyCreeps = function () {
         }
     });
     if (myCreeps.length > 0) {
-        this.say($2, false);
+        this.say('Medic Here', true);
         this.moveTo(myCreeps[0]);
         if (this.pos.getRangeTo(myCreeps[0]) <= 1) {
             this.heal(myCreeps[0]);
@@ -137,7 +137,7 @@ Creep.prototype.healAllyCreeps = function () {
         }
     });
     if (allyCreeps.length > 0) {
-        this.say($2, false);
+        this.say('heal ally', true);
         this.moveTo(allyCreeps[0]);
         let range = this.pos.getRangeTo(allyCreeps[0]);
         if (range <= 1) {
@@ -154,7 +154,7 @@ Creep.prototype.moveToHostileConstructionSites = function () {
     if (this.room.controller && ((this.room.controller.owner && _.includes(FRIENDLIES, this.room.controller.owner.username)) || (this.room.controller.reservation && _.includes(FRIENDLIES, this.room.controller.reservation.username)) || this.room.controller.safeMode)) return false;
     let constructionSite = this.pos.findClosestByRange(this.room.constructionSites, {filter: (s) => !s.pos.checkForRampart() && _.includes(Memory._threatList, s.owner.username)});
     if (constructionSite) {
-        this.say($2, false);
+        this.say('TRAMPLE!!', true);
         if (constructionSite.pos.x === this.pos.x && constructionSite.pos.y === this.pos.y) return this.moveRandom();
         this.shibMove(constructionSite, {range: 0, ignoreCreeps: false});
         return true;

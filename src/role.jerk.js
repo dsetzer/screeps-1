@@ -10,7 +10,7 @@ function role(creep) {
     creep.room.cacheRoomIntel();
     let sentence = ['Just', 'Here', 'Annoying', 'You'];
     let word = Game.time % sentence.length;
-    creep.say($2, false);
+    creep.say(sentence[word], true);
     if (!creep.memory.destination) {
         let adjacent = Game.map.describeExits(creep.pos.roomName);
         creep.memory.destination = _.sample(adjacent);

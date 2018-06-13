@@ -3,7 +3,7 @@ Creep.prototype.swarmRoom = function () {
         if (this.room.name !== this.memory.targetRoom) return this.shibMove(new RoomPosition(25, 25, this.memory.targetRoom), {range: 23});
         let sentence = ['Swarm', 'In', 'Progress'];
         let word = Game.time % sentence.length;
-        this.say($2, false);
+        this.say(sentence[word], true);
         threatManagement(this);
         this.handleMilitaryCreep(true);
     }
