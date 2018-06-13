@@ -24,7 +24,7 @@ function role(creep) {
                 sentence = sentence.concat(Memory._badBoyArray);
             }
             let word = Game.time % sentence.length;
-            creep.say(sentence[word], true);
+            creep.say($2, false);
         }
         //INITIAL CHECKS
         if (creep.borderCheck()) return null;

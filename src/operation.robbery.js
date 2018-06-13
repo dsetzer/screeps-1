@@ -1,7 +1,7 @@
 Creep.prototype.robbery = function () {
     let sentence = ['#overlords', 'Thanks', 'For', 'The', 'Stuff', this.memory.targetRoom];
     let word = Game.time % sentence.length;
-    this.say(sentence[word], true);
+    this.say($2, false);
     let terminal = this.room.terminal;
     let storage = this.room.storage;
     if (this.room.name !== this.memory.targetRoom && !this.memory.hauling) return this.shibMove(new RoomPosition(25, 25, this.memory.targetRoom), {

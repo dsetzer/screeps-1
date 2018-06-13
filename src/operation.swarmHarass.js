@@ -5,7 +5,7 @@ Creep.prototype.swarmHarassRoom = function () {
         if (this.room.name !== this.memory.targetRoom) return this.shibMove(new RoomPosition(25, 25, this.memory.targetRoom), {range: 23});
         let sentence = ['Swarm', 'In', 'Progress'];
         let word = Game.time % sentence.length;
-        this.say(sentence[word], true);
+        this.say($2, false);
         threatManagement(this);
         highCommand.operationSustainability(this.room);
         if (Memory.targetRooms[this.memory.targetRoom]) {

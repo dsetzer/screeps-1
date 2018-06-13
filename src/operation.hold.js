@@ -38,7 +38,7 @@ Creep.prototype.holdRoom = function () {
         Memory.targetRooms[this.room.name].unClaimer = !this.room.controller.ticksToDowngrade || this.room.controller.level > 1 || this.room.controller.ticksToDowngrade > this.ticksToLive;
         let sentence = ['Area', 'Denial', 'In', 'Progress'];
         let word = Game.time % sentence.length;
-        this.say(sentence[word], true);
+        this.say($2, false);
         let hostile = this.findClosestEnemy();
         if (Memory.targetRooms[this.memory.targetRoom]) {
             if (hostile && hostile.body && (hostile.getActiveBodyparts(ATTACK) || hostile.getActiveBodyparts(RANGED_ATTACK))) {

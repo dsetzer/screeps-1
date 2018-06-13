@@ -7,7 +7,7 @@ const profiler = require('screeps-profiler');
 
 module.exports.role = function (creep) {
     //INITIAL CHECKS
-    creep.say(ICONS.reaction, true);
+    creep.say($2, false);
     if (creep.renewalCheck(6)) return;
     if (creep.borderCheck()) return;
     if (creep.wrongRoom()) return;
@@ -58,7 +58,7 @@ function emptyLab(creep) {
     let terminal = creep.room.terminal;
     let storage = creep.room.storage;
     let lab = Game.getObjectById(creep.memory.labHelper);
-    creep.say(ICONS.reaction + 'Emptying', true);
+    creep.say($2, false);
     if (_.sum(creep.carry) > 0) {
         for (let resourceType in creep.carry) {
             if ((_.includes(END_GAME_BOOSTS, resourceType) || _.includes(TIER_2_BOOSTS, resourceType) || resourceType === RESOURCE_GHODIUM) && _.sum(terminal.store) < terminal.storeCapacity * 0.95) {
@@ -112,7 +112,7 @@ function supplyLab(creep) {
     let terminal = creep.room.terminal;
     let storage = creep.room.storage;
     let lab = Game.getObjectById(creep.memory.labHelper);
-    creep.say(ICONS.reaction + 'Filling', true);
+    creep.say($2, false);
     creep.memory.componentNeeded = lab.memory.itemNeeded;
     if (!creep.carry[creep.memory.componentNeeded]) {
         if (!creep.memory.itemStorage) {
