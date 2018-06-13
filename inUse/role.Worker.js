@@ -10,7 +10,7 @@ const profiler = require('screeps-profiler');
  * @return {null}
  */
 function role(creep) {
-    //INITIAL CHECKS
+    // INITIAL CHECKS
     if (!creep.memory.boostAttempt) return creep.tryToBoost(['build']);
     if (creep.borderCheck()) return null;
     if (creep.wrongRoom()) return null;

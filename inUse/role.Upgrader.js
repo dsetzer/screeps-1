@@ -7,7 +7,7 @@ const profiler = require('screeps-profiler');
 
 function role(creep) {
         if (creep.memory.boostAttempt !== true) return creep.tryToBoost(['upgrade']);
-        //ANNOUNCE
+        // ANNOUNCE
         if (_.filter(Game.creeps, (c) => (c.memory.announcer === true) && c.memory.overlord === creep.memory.overlord).length === 0) creep.memory.announcer = true;
         if (creep.memory.announcer) {
             let sentence = ['-', '#overlords', '-'];
